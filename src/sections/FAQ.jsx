@@ -16,10 +16,6 @@ export default function FAQ() {
         <h2 className="text-3xl font-extrabold sm:text-4xl">
           A few things you might want to know.
         </h2>
-        <p className="mt-4 text-sm text-muted">
-          Here are a few quick answers to help you out. If you still can&rsquo;t find what you need,
-          just send me a message.
-        </p>
       </div>
       <div className="mx-auto mt-12 grid max-w-4xl gap-x-10 gap-y-8 sm:grid-cols-2">
         {faqs.map((item) => (

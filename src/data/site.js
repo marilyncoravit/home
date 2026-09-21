@@ -150,22 +150,22 @@ export const faqs = [
   {
     question: 'What kind of design work do you specialize in?',
     answer:
-      "I specialize in end-to-end product design (research, UX, and UI) for web and SaaS products, with a growing focus on AI-powered workflows and design systems.",
+      'End-to-end product design for complex web and SaaS products, with a focus on AI-powered workflows and design systems.',
   },
   {
-    question: 'Are you currently open to freelance or full-time opportunities?',
+    question: 'Are you open to new opportunities?',
     answer:
-      "Yes! I'm open to both freelance projects and full-time roles. Reach out below and let's talk about what you have in mind.",
+      "I'm always open to conversations about meaningful product-design and leadership opportunities.",
   },
   {
-    question: 'Can you help with AI-powered design or automation projects?',
+    question: 'Can you help with AI-powered products?',
     answer:
-      "Absolutely! At Klaviyo I helped shape Email AI, a modular AI-assisted email builder, so I have direct experience designing trustworthy, transparent AI workflows.",
+      'Yes. I design AI-assisted experiences that make complex workflows feel clear, useful, and trustworthy.',
   },
   {
-    question: 'Can I see more details about a specific project?',
+    question: 'Can I learn more about a specific project?',
     answer:
-      "Definitely. Each case study below has a deeper dive, and I'm always happy to walk through the full story on a call.",
+      "Absolutely. Some work can't be shared publicly, but I'm happy to walk through additional details in a conversation.",
   },
 ]
 
