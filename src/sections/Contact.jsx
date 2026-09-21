@@ -12,17 +12,36 @@ export default function Contact() {
 
   const onChange = (field) => (e) => setForm((prev) => ({ ...prev, [field]: e.target.value }))
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault()
     if (!form.name || !form.email || !form.message) return
 
-    // No backend on this static site yet: open the visitor's email client
-    // pre-filled with their message so the form is fully functional today.
-    const subject = encodeURIComponent(`Portfolio inquiry from ${form.name}`)
-    const body = encodeURIComponent(`${form.message}\n\nFrom ${form.name} (${form.email})`)
-    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`
-    setStatus('sent')
-    setForm(initialForm)
+    setStatus('sending')
+    try {
+      // No server on this static site: FormSubmit relays the message
+      // straight to my inbox without needing a backend.
+      const res = await fetch(`https://formsubmit.co/ajax/${site.email}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          _subject: `Portfolio inquiry from ${form.name}`,
+          _captcha: 'false',
+        }),
+      })
+      if (!res.ok) throw new Error('Request failed')
+      setStatus('sent')
+      setForm(initialForm)
+    } catch {
+      // Fall back to opening the visitor's own email client so the
+      // message isn't lost if the request couldn't go through.
+      const subject = encodeURIComponent(`Portfolio inquiry from ${form.name}`)
+      const body = encodeURIComponent(`${form.message}\n\nFrom ${form.name} (${form.email})`)
+      window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`
+      setStatus('error')
+    }
   }
 
   return (
@@ -31,10 +50,6 @@ export default function Contact() {
         <div className="rounded-3xl hand-border bg-paper p-8 sm:p-12">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold sm:text-4xl">Let&rsquo;s connect.</h2>
-            <p className="mt-2 text-sm text-muted">
-              Have a question or want to learn more about my work? Fill out the form below, and
-              I&rsquo;ll get back to you soon.
-            </p>
           </div>
 
           <form onSubmit={onSubmit} className="mt-10 space-y-6">
@@ -75,12 +90,18 @@ export default function Contact() {
             </label>
 
             <div className="pt-2 text-center">
-              <Button type="submit" variant="secondary">
-                Submit
+              <Button type="submit" variant="secondary" disabled={status === 'sending'}>
+                {status === 'sending' ? 'Sending…' : 'Submit'}
               </Button>
               {status === 'sent' && (
                 <p className="mt-4 text-sm text-muted">
-                  Thanks! Your email app should be opening now. Send it over and I&rsquo;ll reply soon.
+                  Thanks for reaching out! Your message is on its way, and I&rsquo;ll reply soon.
+                </p>
+              )}
+              {status === 'error' && (
+                <p className="mt-4 text-sm text-muted">
+                  Something went wrong, so I&rsquo;ve opened your email app instead. Send it over
+                  and I&rsquo;ll reply soon.
                 </p>
               )}
             </div>
