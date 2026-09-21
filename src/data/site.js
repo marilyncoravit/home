@@ -136,12 +136,14 @@ export const process = [
 
 export const tools = [
   'Figma',
-  'Lovable',
-  'ChatGPT',
-  'Whimsical',
-  'Copilot',
-  'VS Code',
+  'FigJam',
+  'Framer',
+  'Storybook',
   'Claude Code',
+  'Cursor',
+  'GitHub Copilot',
+  'Lovable',
+  'Adobe Creative Suite',
 ]
 
 export const faqs = [
