@@ -59,7 +59,7 @@ export default function ProcessCarousel({ steps }) {
               </span>
               <span className="text-sm font-semibold text-muted">{step.number}</span>
             </div>
-            <h3 className="mt-6 text-xl font-bold">{step.title}</h3>
+            <h3 className="mt-6 text-2xl font-bold">{step.title}</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted">{step.description}</p>
           </div>
         ))}

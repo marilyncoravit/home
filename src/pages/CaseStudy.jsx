@@ -51,15 +51,15 @@ export default function CaseStudy() {
       <section className="px-6 py-16">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-3">
           <div>
-            <h2 className="font-bold">Problem</h2>
+            <h2 className="text-lg font-bold">Problem</h2>
             <p className="mt-2 text-sm leading-relaxed text-muted">{project.problem}</p>
           </div>
           <div>
-            <h2 className="font-bold">Approach</h2>
+            <h2 className="text-lg font-bold">Approach</h2>
             <p className="mt-2 text-sm leading-relaxed text-muted">{project.approach}</p>
           </div>
           <div>
-            <h2 className="font-bold">Impact</h2>
+            <h2 className="text-lg font-bold">Impact</h2>
             <p className="mt-2 text-sm leading-relaxed text-muted">{project.impact}</p>
           </div>
         </div>
