@@ -42,8 +42,8 @@ export default function CaseStudy() {
           </div>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            <PlaceholderImage label={`${project.title} — screenshot 1`} />
-            <PlaceholderImage label={`${project.title} — screenshot 2`} />
+            <PlaceholderImage label={`${project.title}, screenshot 1`} />
+            <PlaceholderImage label={`${project.title}, screenshot 2`} />
           </div>
         </div>
       </section>

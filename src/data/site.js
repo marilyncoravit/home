@@ -7,8 +7,8 @@ export const site = {
   linkedin: 'https://www.linkedin.com/in/marilyncora/',
   resumeHref: `${import.meta.env.BASE_URL}resume.pdf`, // TODO: drop your real resume PDF into /public/resume.pdf
   tagline: "I'm Marilyn Hampton, a product designer based in Massachusetts.",
-  bio: "My work is rooted in designing experiences that are both human-centered and future-ready—leveraging AI, data, and design thinking to craft products that inform, inspire, and empower. I thrive on turning ideas into experiences that feel as intuitive as they are impactful.",
-  heroIntro: "I design human-centered products—shaped by research, sharpened with AI, and built to make a meaningful impact.",
+  bio: "My work is rooted in designing experiences that are both human-centered and future-ready, leveraging AI, data, and design thinking to craft products that inform, inspire, and empower. I thrive on turning ideas into experiences that feel as intuitive as they are impactful.",
+  heroIntro: "I design human-centered products, shaped by research, sharpened with AI, and built to make a meaningful impact.",
 }
 
 export const career = [
@@ -90,7 +90,7 @@ export const process = [
     color: 'mint',
     title: 'Identify',
     description:
-      'I start by defining the problem, uncovering user needs, and aligning on business goals through research and discovery—using AI to speed up competitive analysis and communicate findings clearly.',
+      'I start by defining the problem, uncovering user needs, and aligning on business goals through research and discovery, using AI to speed up competitive analysis and communicate findings clearly.',
   },
   {
     number: '02.',
@@ -106,7 +106,7 @@ export const process = [
     color: 'peach',
     title: 'Prototype',
     description:
-      'I rapidly explore ideas through low- to high-fidelity prototypes to visualize and validate solutions early—leveraging AI tools to speed up iteration and communicate concepts clearly.',
+      'I rapidly explore ideas through low- to high-fidelity prototypes to visualize and validate solutions early, leveraging AI tools to speed up iteration and communicate concepts clearly.',
   },
   {
     number: '04.',
@@ -148,7 +148,7 @@ export const faqs = [
   {
     question: 'What kind of design work do you specialize in?',
     answer:
-      "I specialize in end-to-end product design—research, UX, and UI—for web and SaaS products, with a growing focus on AI-powered workflows and design systems.",
+      "I specialize in end-to-end product design (research, UX, and UI) for web and SaaS products, with a growing focus on AI-powered workflows and design systems.",
   },
   {
     question: 'Are you currently open to freelance or full-time opportunities?',
@@ -158,7 +158,7 @@ export const faqs = [
   {
     question: 'Can you help with AI-powered design or automation projects?',
     answer:
-      "Absolutely—at Klaviyo I helped shape Email AI, a modular AI-assisted email builder, so I have direct experience designing trustworthy, transparent AI workflows.",
+      "Absolutely! At Klaviyo I helped shape Email AI, a modular AI-assisted email builder, so I have direct experience designing trustworthy, transparent AI workflows.",
   },
   {
     question: 'Can I see more details about a specific project?',

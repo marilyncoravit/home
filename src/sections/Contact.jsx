@@ -19,7 +19,7 @@ export default function Contact() {
     // No backend on this static site yet: open the visitor's email client
     // pre-filled with their message so the form is fully functional today.
     const subject = encodeURIComponent(`Portfolio inquiry from ${form.name}`)
-    const body = encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`)
+    const body = encodeURIComponent(`${form.message}\n\nFrom ${form.name} (${form.email})`)
     window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`
     setStatus('sent')
     setForm(initialForm)
@@ -80,7 +80,7 @@ export default function Contact() {
               </Button>
               {status === 'sent' && (
                 <p className="mt-4 text-sm text-muted">
-                  Thanks! Your email app should be opening now — send it over and I&rsquo;ll reply soon.
+                  Thanks! Your email app should be opening now. Send it over and I&rsquo;ll reply soon.
                 </p>
               )}
             </div>

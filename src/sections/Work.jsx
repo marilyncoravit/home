@@ -19,7 +19,7 @@ export default function Work() {
             A few projects I&rsquo;m proud to have shaped end to end.
           </h2>
           <p className="mt-4 text-sm text-muted">
-            From messy problem to shipped product—here&rsquo;s a look at how I work and what it drove.
+            From messy problem to shipped product: here&rsquo;s a look at how I work and what it drove.
           </p>
         </div>
 
