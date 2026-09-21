@@ -47,7 +47,7 @@ export default function Contact() {
                   value={form.name}
                   onChange={onChange('name')}
                   placeholder="Your name *"
-                  className="mt-2 w-full border-b border-ink/30 bg-transparent py-2 text-ink outline-none placeholder:text-muted/70 focus:border-ink"
+                  className="mt-2 w-full border-b border-ink/30 bg-transparent py-2 text-ink outline-none placeholder:text-muted focus:border-ink"
                 />
               </label>
               <label className="block text-sm">
@@ -58,7 +58,7 @@ export default function Contact() {
                   value={form.email}
                   onChange={onChange('email')}
                   placeholder="Email address *"
-                  className="mt-2 w-full border-b border-ink/30 bg-transparent py-2 text-ink outline-none placeholder:text-muted/70 focus:border-ink"
+                  className="mt-2 w-full border-b border-ink/30 bg-transparent py-2 text-ink outline-none placeholder:text-muted focus:border-ink"
                 />
               </label>
             </div>
@@ -70,7 +70,7 @@ export default function Contact() {
                 value={form.message}
                 onChange={onChange('message')}
                 placeholder="Tell me about your project *"
-                className="mt-2 w-full resize-none border-b border-ink/30 bg-transparent py-2 text-ink outline-none placeholder:text-muted/70 focus:border-ink"
+                className="mt-2 w-full resize-none border-b border-ink/30 bg-transparent py-2 text-ink outline-none placeholder:text-muted focus:border-ink"
               />
             </label>
 
