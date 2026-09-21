@@ -13,6 +13,12 @@ export const site = {
 
 export const career = [
   {
+    date: 'DEC 2025 – PRESENT',
+    role: 'Principal UX Product Designer at Pegasystems',
+    description:
+      'Design enterprise experiences for customer service teams, simplifying complex workflows and bringing AI into products in ways that are useful, intuitive, and trustworthy. Partner closely with product, engineering, and cross-functional teams from early discovery through delivery.',
+  },
+  {
     date: 'APR 2022 – AUG 2025',
     role: 'Sr. Product Designer at Klaviyo',
     description:
