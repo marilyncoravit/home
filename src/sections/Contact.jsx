@@ -97,18 +97,24 @@ export default function Contact() {
         </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-3">
-          {contactCards.map((card) => (
-            <div
-              key={card.label}
-              className="flex flex-col items-center gap-2 rounded-2xl hand-border bg-paper p-6 text-center"
-            >
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full hand-border bg-mint-soft">
-                <Icon name={card.icon} className="h-5 w-5" />
-              </span>
-              <p className="font-bold">{card.label}</p>
-              <p className="text-sm text-muted">{card.value}</p>
-            </div>
-          ))}
+          {contactCards.map((card) => {
+            const Tag = card.href ? 'a' : 'div'
+            return (
+              <Tag
+                key={card.label}
+                href={card.href}
+                className={`flex flex-col items-center gap-2 rounded-2xl hand-border bg-paper p-6 text-center ${
+                  card.href ? 'transition-transform hover:-translate-y-0.5' : ''
+                }`}
+              >
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full hand-border bg-mint-soft">
+                  <Icon name={card.icon} className="h-5 w-5" />
+                </span>
+                <p className="font-bold">{card.label}</p>
+                <p className="text-sm text-muted">{card.value}</p>
+              </Tag>
+            )
+          })}
         </div>
       </div>
     </section>

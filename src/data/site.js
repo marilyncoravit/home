@@ -169,6 +169,6 @@ export const faqs = [
 
 export const contactCards = [
   { icon: 'pin', label: 'Location', value: site.location },
-  { icon: 'mail', label: 'Email me', value: site.email },
+  { icon: 'mail', label: 'Email me', value: site.email, href: `mailto:${site.email}` },
   { icon: 'phone', label: 'Call me', value: site.phone },
 ]
