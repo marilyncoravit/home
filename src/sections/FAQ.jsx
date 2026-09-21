@@ -1,17 +1,8 @@
-import Icon from '../components/ui/Icon'
 import { faqs } from '../data/site'
 
 export default function FAQ() {
   return (
-    <section className="relative px-6 py-24">
-      <Icon
-        name="star"
-        className="pointer-events-none absolute left-8 top-20 hidden h-6 w-6 text-ink/40 sm:block"
-      />
-      <Icon
-        name="hash"
-        className="pointer-events-none absolute right-8 top-10 h-6 w-6 text-ink/40"
-      />
+    <section className="px-6 py-24">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-3xl font-extrabold sm:text-4xl">
           A few things you might want to know.
