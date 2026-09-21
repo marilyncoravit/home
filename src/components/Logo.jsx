@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import headshot from '../assets/headshot.webp'
+import logo from '../assets/logo.png'
 
 export default function Logo({ className = '', onClick }) {
   return (
@@ -7,9 +7,9 @@ export default function Logo({ className = '', onClick }) {
       to="/"
       onClick={onClick}
       aria-label="Marilyn Hampton, home"
-      className={`inline-flex h-11 w-11 items-center justify-center overflow-hidden rounded-full ${className}`}
+      className={`inline-flex items-center ${className}`}
     >
-      <img src={headshot} alt="" className="h-full w-full object-cover" width={44} height={44} />
+      <img src={logo} alt="Marilyn" className="h-9 w-auto sm:h-10" />
     </Link>
   )
 }
