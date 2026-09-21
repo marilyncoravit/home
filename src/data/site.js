@@ -4,7 +4,7 @@ export const site = {
   location: 'Greater Boston',
   email: 'marilyncorahampton@gmail.com',
   phone: '(508) 847-8500',
-  linkedin: 'https://www.linkedin.com/in/marilyn-hampton', // TODO: replace with real profile URL
+  linkedin: 'https://www.linkedin.com/in/marilyncora/',
   resumeHref: `${import.meta.env.BASE_URL}resume.pdf`, // TODO: drop your real resume PDF into /public/resume.pdf
   tagline: "I'm Marilyn Hampton, a product designer based in Massachusetts.",
   bio: "My work is rooted in designing experiences that are both human-centered and future-ready—leveraging AI, data, and design thinking to craft products that inform, inspire, and empower. I thrive on turning ideas into experiences that feel as intuitive as they are impactful.",
