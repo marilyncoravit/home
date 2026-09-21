@@ -1,4 +1,4 @@
-import headshot from '../assets/headshot.webp'
+import aboutPhoto from '../assets/about-photo.webp'
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
 import TestimonialCarousel from '../components/TestimonialCarousel'
@@ -17,7 +17,7 @@ export default function About() {
           </div>
           <div className="mx-auto w-40 shrink-0 sm:w-48">
             <div className="overflow-hidden rounded-full hand-border">
-              <img src={headshot} alt={site.name} className="aspect-square w-full object-cover" />
+              <img src={aboutPhoto} alt={site.name} className="aspect-square w-full object-cover" />
             </div>
           </div>
         </div>
