@@ -18,7 +18,7 @@ export default function Hero() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-ink/70 px-4 py-1 text-xs font-semibold uppercase tracking-wide">
             <Icon name="sparkle" className="h-3.5 w-3.5" />
-            {site.role} &middot; {site.location}
+            15+ years of design experience
           </span>
           <h1 className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
             Hi, I&rsquo;m {site.name.split(' ')[0]}. I design products people
