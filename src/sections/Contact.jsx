@@ -31,7 +31,7 @@ export default function Contact() {
         <div className="rounded-3xl hand-border bg-paper p-8 sm:p-12">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold sm:text-4xl">Let&rsquo;s connect.</h2>
-            <p className="mt-3 text-sm text-muted">
+            <p className="mt-2 text-sm text-muted">
               Have a question or want to learn more about my work? Fill out the form below, and
               I&rsquo;ll get back to you soon.
             </p>
@@ -94,11 +94,11 @@ export default function Contact() {
           </h3>
         </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-3">
           {contactCards.map((card) => (
             <div
               key={card.label}
-              className="flex flex-col items-center gap-3 rounded-2xl hand-border bg-paper p-6 text-center"
+              className="flex flex-col items-center gap-2 rounded-2xl hand-border bg-paper p-6 text-center"
             >
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-full hand-border bg-mint-soft">
                 <Icon name={card.icon} className="h-5 w-5" />

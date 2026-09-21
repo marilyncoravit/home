@@ -5,7 +5,7 @@ import { site } from '../data/site'
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden px-6 pb-20 pt-16 sm:pt-24">
+    <section className="relative overflow-hidden px-6 pb-24 pt-16 sm:pt-24">
       <Icon
         name="sparkle"
         className="pointer-events-none absolute right-10 top-8 h-8 w-8 text-ink/70 sm:right-24"
@@ -34,14 +34,14 @@ export default function Hero() {
 
         <div className="relative">
           <div className="absolute -left-6 -top-6 h-full w-full rounded-[2rem] bg-mint-soft sm:-left-8 sm:-top-8" />
-          <div className="relative rounded-[2rem] hand-border bg-paper p-3">
+          <div className="relative rounded-[2rem] hand-border bg-paper p-4">
             <img
               src={headshot}
               alt={site.name}
               className="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
             />
           </div>
-          <div className="absolute -bottom-6 -right-4 flex items-center gap-3 rounded-2xl hand-border bg-blush px-5 py-4 sketch-shadow sm:-right-8">
+          <div className="absolute -bottom-6 -right-4 flex items-center gap-2 rounded-2xl hand-border bg-blush px-4 py-4 sketch-shadow sm:-right-8">
             <span className="font-script text-3xl leading-none">15+</span>
             <span className="max-w-[9rem] text-xs font-medium leading-snug">
               years of design experience

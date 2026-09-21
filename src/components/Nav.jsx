@@ -51,12 +51,12 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <Button
             href="#contact"
             onClick={goTo('#contact')}
             variant="secondary"
-            className="hidden !px-5 !py-2 text-sm sm:inline-flex"
+            className="hidden !px-4 !py-2 text-sm sm:inline-flex"
           >
             Let&rsquo;s talk
           </Button>
@@ -72,7 +72,7 @@ export default function Nav() {
         </div>
       </nav>
       {menuOpen && (
-        <ul className="flex flex-col gap-1 border-t border-ink/10 px-6 py-4 text-sm font-medium md:hidden">
+        <ul className="flex flex-col gap-2 border-t border-ink/10 px-6 py-4 text-sm font-medium md:hidden">
           {links.map((link) => (
             <li key={link.hash}>
               <a href={link.hash} onClick={goTo(link.hash)} className="block py-2">

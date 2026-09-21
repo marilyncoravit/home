@@ -22,7 +22,7 @@ export default function Footer() {
             </li>
           ))}
         </ul>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <a
             href={site.linkedin}
             target="_blank"

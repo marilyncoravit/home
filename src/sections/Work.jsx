@@ -31,7 +31,7 @@ export default function Work() {
               className={`group flex flex-col rounded-3xl hand-border p-6 transition-transform duration-200 hover:-translate-y-1 ${colorMap[project.color]}`}
             >
               <Badge className="w-fit bg-paper">{project.badge}</Badge>
-              <PlaceholderImage label={`${project.title} screenshot`} className="mt-5" />
+              <PlaceholderImage label={`${project.title} screenshot`} className="mt-6" />
               <div className="mt-6 flex-1">
                 <h3 className="text-2xl font-bold">{project.title}</h3>
                 <p className="mt-2 text-sm text-muted">{project.subtitle}</p>

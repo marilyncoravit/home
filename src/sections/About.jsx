@@ -40,7 +40,7 @@ export default function About() {
               <li key={item.role} className="relative">
                 <span className="absolute -left-[2.35rem] top-1 h-3 w-3 rounded-full hand-border bg-blush" />
                 <p className="text-xs font-semibold uppercase tracking-wide text-muted">{item.date}</p>
-                <h4 className="mt-1 text-lg font-bold">{item.role}</h4>
+                <h4 className="mt-2 text-lg font-bold">{item.role}</h4>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
               </li>
             ))}

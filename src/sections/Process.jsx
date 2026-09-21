@@ -36,16 +36,16 @@ export default function Process() {
                 <span className="text-sm font-semibold text-muted">{step.number}</span>
               </div>
               <h3 className="mt-6 text-xl font-bold">{step.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted">{step.description}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{step.description}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-16 text-center">
           <p className="text-sm font-medium text-muted">The tools behind my process:</p>
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 border-t border-ink/15 pt-6 text-lg font-semibold">
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 border-t border-ink/15 pt-6 text-lg font-semibold">
             {tools.map((tool, i) => (
-              <span key={tool} className="flex items-center gap-3">
+              <span key={tool} className="flex items-center gap-2">
                 {tool}
                 {i < tools.length - 1 && <span className="text-ink/30">&#8727;</span>}
               </span>

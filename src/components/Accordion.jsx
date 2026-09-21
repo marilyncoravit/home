@@ -14,7 +14,7 @@ export default function Accordion({ items }) {
               type="button"
               onClick={() => setOpenIndex(isOpen ? null : index)}
               aria-expanded={isOpen}
-              className="flex w-full items-center justify-between gap-6 py-5 text-left"
+              className="flex w-full items-center justify-between gap-6 py-6 text-left"
             >
               <span className="font-semibold">{item.question}</span>
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full hand-border">
@@ -23,7 +23,7 @@ export default function Accordion({ items }) {
             </button>
             <div
               className={`grid transition-all duration-200 ease-out ${
-                isOpen ? 'grid-rows-[1fr] pb-5 opacity-100' : 'grid-rows-[0fr] opacity-0'
+                isOpen ? 'grid-rows-[1fr] pb-6 opacity-100' : 'grid-rows-[0fr] opacity-0'
               }`}
             >
               <p className="overflow-hidden text-sm leading-relaxed text-muted">{item.answer}</p>

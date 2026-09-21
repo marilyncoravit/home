@@ -30,7 +30,7 @@ export default function CaseStudy() {
           <div className="mt-8">
             <Badge>{project.badge}</Badge>
             <h1 className="mt-4 text-4xl font-extrabold sm:text-5xl">{project.title}</h1>
-            <p className="mt-3 max-w-2xl text-lg text-muted">{project.subtitle}</p>
+            <p className="mt-2 max-w-2xl text-lg text-muted">{project.subtitle}</p>
             <div className="mt-6 flex flex-wrap gap-x-10 gap-y-2 text-sm">
               <p>
                 <span className="font-semibold">Role:</span> {project.role}
@@ -52,15 +52,15 @@ export default function CaseStudy() {
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-3">
           <div>
             <h2 className="font-bold">Problem</h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted">{project.problem}</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted">{project.problem}</p>
           </div>
           <div>
             <h2 className="font-bold">Approach</h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted">{project.approach}</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted">{project.approach}</p>
           </div>
           <div>
             <h2 className="font-bold">Impact</h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted">{project.impact}</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted">{project.impact}</p>
           </div>
         </div>
 
@@ -80,7 +80,7 @@ export default function CaseStudy() {
         <p className="text-sm text-muted">Want the full story?</p>
         <a
           href={`mailto:${site.email}?subject=${encodeURIComponent(`Re: ${project.title}`)}`}
-          className="mt-1 inline-block text-lg font-bold underline decoration-2 underline-offset-4"
+          className="mt-2 inline-block text-lg font-bold underline decoration-2 underline-offset-4"
         >
           Let&rsquo;s walk through it together
         </a>
