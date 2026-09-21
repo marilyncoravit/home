@@ -27,7 +27,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="bg-lilac px-6 py-24">
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-4xl">
         <div className="rounded-3xl hand-border bg-paper p-8 sm:p-12">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold sm:text-4xl">Let&rsquo;s connect.</h2>
@@ -90,7 +90,9 @@ export default function Contact() {
         <div className="mt-16 text-center">
           <Badge>Contact</Badge>
           <h3 className="mx-auto mt-4 max-w-lg text-3xl font-extrabold leading-tight">
-            Got a project in mind? Let&rsquo;s get in touch.
+            Got a project in mind?
+            <br />
+            Let&rsquo;s get in touch.
           </h3>
         </div>
 
