@@ -1,8 +1,8 @@
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
-import Icon from '../components/ui/Icon'
 import PlaceholderImage from '../components/ui/PlaceholderImage'
-import { career, site, testimonial } from '../data/site'
+import TestimonialCarousel from '../components/TestimonialCarousel'
+import { career, site, testimonials } from '../data/site'
 
 export default function About() {
   return (
@@ -47,18 +47,7 @@ export default function About() {
           </ol>
         </div>
 
-        <div className="relative mt-16 rounded-3xl hand-border bg-paper p-10 text-center sketch-shadow">
-          <div className="mb-4 flex justify-center gap-1 text-ink">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Icon key={i} name="star" className="h-4 w-4" />
-            ))}
-          </div>
-          <p className="mx-auto max-w-2xl text-xl font-medium leading-snug">
-            &ldquo;{testimonial.quote}&rdquo;
-          </p>
-          <p className="mt-6 font-bold">{testimonial.name}</p>
-          <p className="text-sm text-muted">{testimonial.title}</p>
-        </div>
+        <TestimonialCarousel testimonials={testimonials} />
       </div>
     </section>
   )

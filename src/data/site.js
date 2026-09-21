@@ -32,12 +32,50 @@ export const career = [
   },
 ]
 
-export const testimonial = {
-  quote:
-    'Marilyn is an exceptional designer who pairs strong technical design skills with natural taste and deep understanding of customer needs.',
-  name: 'Tom Nolan',
-  title: 'Product Manager',
-}
+export const testimonials = [
+  {
+    quote:
+      'Marilyn was always proactive, with excellent communication skills and an eye for detail. She kept the project moving and anyone would be lucky to work with her.',
+    name: 'Jenn Brisebios',
+    title: 'Customer Experience Manager',
+  },
+  {
+    quote:
+      "Marilyn soon became my mentor through the department's mentorship program. We had weekly meetings for 2 years where she coached me, answered my questions, and kept our space judgment-free.",
+    name: 'Lauren Tripp',
+    title: 'Content Designer',
+  },
+  {
+    quote:
+      'Marilyn is an exceptional designer who pairs strong technical design skills with natural taste and deep understanding of customer needs.',
+    name: 'Tom Nolan',
+    title: 'Product Manager',
+  },
+  {
+    quote:
+      'She has consistently proven that she prioritizes quality of work. She is meticulous in her research and iterates frequently to make sure the final solution is the best possible one.',
+    name: 'Vera Guttenburger',
+    title: 'Sr. Product Designer',
+  },
+  {
+    quote:
+      'Marilyn has an intuitive understanding of how users interact with complex tools like our email editor and approach brand setup.',
+    name: 'Sarah Delaney',
+    title: 'Lead Behavioral Designer',
+  },
+  {
+    quote:
+      'Her honest, constructive feedback and openness to share ideas foster a collaborative environment that elevates the entire team.',
+    name: 'Parita Shah',
+    title: 'Software Engineer II',
+  },
+  {
+    quote:
+      "She's great at walking others through her designs, explaining her rationale with pros and cons, and persuading why one design option is better than others.",
+    name: 'Nic Couturier',
+    title: 'Lead Product Designer',
+  },
+]
 
 export const process = [
   {
