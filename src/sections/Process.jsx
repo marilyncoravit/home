@@ -1,12 +1,7 @@
 import Badge from '../components/ui/Badge'
 import Icon from '../components/ui/Icon'
+import ProcessCarousel from '../components/ProcessCarousel'
 import { process, tools } from '../data/site'
-
-const colorMap = {
-  mint: 'bg-mint-soft',
-  blush: 'bg-blush/60',
-  peach: 'bg-peach/60',
-}
 
 export default function Process() {
   return (
@@ -23,23 +18,7 @@ export default function Process() {
           </h2>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-3">
-          {process.map((step) => (
-            <div
-              key={step.title}
-              className={`flex flex-col rounded-2xl hand-border p-6 ${colorMap[step.color]}`}
-            >
-              <div className="flex items-center justify-between">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full hand-border bg-paper">
-                  <Icon name={step.icon} className="h-5 w-5" />
-                </span>
-                <span className="text-sm font-semibold text-muted">{step.number}</span>
-              </div>
-              <h3 className="mt-6 text-xl font-bold">{step.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{step.description}</p>
-            </div>
-          ))}
-        </div>
+        <ProcessCarousel steps={process} />
 
         <div className="mt-16 text-center">
           <p className="text-sm font-medium text-muted">The tools behind my process:</p>

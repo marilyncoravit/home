@@ -90,7 +90,7 @@ export const process = [
     color: 'mint',
     title: 'Identify',
     description:
-      'I start by defining the problem, uncovering user needs, and aligning on business goals through research and discovery.',
+      'I start by defining the problem, uncovering user needs, and aligning on business goals through research and discovery—using AI to speed up competitive analysis and communicate findings clearly.',
   },
   {
     number: '02.',
@@ -106,7 +106,31 @@ export const process = [
     color: 'peach',
     title: 'Prototype',
     description:
-      'I rapidly explore ideas through low- to high-fidelity prototypes to visualize and validate solutions early.',
+      'I rapidly explore ideas through low- to high-fidelity prototypes to visualize and validate solutions early—leveraging AI tools to speed up iteration and communicate concepts clearly.',
+  },
+  {
+    number: '04.',
+    icon: 'sliders',
+    color: 'butter',
+    title: 'Apply',
+    description:
+      'I refine designs based on feedback, ensuring the solution fits both user expectations and technical realities.',
+  },
+  {
+    number: '05.',
+    icon: 'monitor',
+    color: 'sky',
+    title: 'Communicate',
+    description:
+      'I share outcomes and rationale with cross-functional teams to maintain clarity and alignment.',
+  },
+  {
+    number: '06.',
+    icon: 'trendUp',
+    color: 'mint',
+    title: 'Track',
+    description:
+      'I measure success post-launch, gather insights, and use them to inform future iterations.',
   },
 ]
 

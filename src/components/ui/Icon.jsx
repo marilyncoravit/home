@@ -48,6 +48,25 @@ const paths = {
   ),
   hash: <path d="M9 3.5 7 20.5M17 3.5l-2 17M4 9h16M3.5 15h16" />,
   check: <path d="M5 13l4 4L19 7" />,
+  sliders: (
+    <>
+      <path d="M4 7h9M17 7h3M4 17h3M11 17h9" />
+      <circle cx="13" cy="7" r="2" />
+      <circle cx="7" cy="17" r="2" />
+    </>
+  ),
+  monitor: (
+    <>
+      <rect x="3.5" y="4.5" width="17" height="12" rx="2" />
+      <path d="M8.5 20h7M12 16.5V20" />
+    </>
+  ),
+  trendUp: (
+    <>
+      <path d="M4 16l5-5 4 3 7-8" />
+      <path d="M16 6h4v4" />
+    </>
+  ),
 }
 
 export default function Icon({ name, className = 'h-5 w-5', strokeWidth = 1.6 }) {
