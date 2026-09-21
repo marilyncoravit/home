@@ -1,0 +1,98 @@
+export const site = {
+  name: 'Marilyn Hampton',
+  role: 'Product Designer',
+  location: 'Greater Boston',
+  email: 'marilyncorahampton@gmail.com',
+  phone: '(508) 847-8500',
+  linkedin: 'https://www.linkedin.com/in/marilyn-hampton', // TODO: replace with real profile URL
+  resumeHref: `${import.meta.env.BASE_URL}resume.pdf`, // TODO: drop your real resume PDF into /public/resume.pdf
+  tagline: "I'm Marilyn Hampton, a product designer based in Massachusetts.",
+  bio: "My work is rooted in designing experiences that are both human-centered and future-ready—leveraging AI, data, and design thinking to craft products that inform, inspire, and empower. I thrive on turning ideas into experiences that feel as intuitive as they are impactful.",
+  heroIntro: "I design human-centered products—shaped by research, sharpened with AI, and built to make a meaningful impact.",
+}
+
+export const career = [
+  {
+    date: 'APR 2022 – AUG 2025',
+    role: 'Sr. Product Designer at Klaviyo',
+    description:
+      "Redesigned Klaviyo's Brand Library, boosting usage and cutting asset retrieval time by 40%. Helped shape Email AI and led dogfooding sessions that improved empathy and usability across teams.",
+  },
+  {
+    date: 'APR 2021 – NOV 2021',
+    role: 'Sr. Product Designer at Constant Contact',
+    description:
+      'Led research to improve the email editor experience, translating insights into designs that made template creation more intuitive.',
+  },
+  {
+    date: 'OCT 2020 – APR 2021',
+    role: 'Sr. Product Designer at Website Builder',
+    description:
+      'Improved the booking system for small businesses through user research and rapid design iterations, enabling more efficient scheduling and easier management of multiple appointments.',
+  },
+]
+
+export const testimonial = {
+  quote:
+    'Marilyn is an exceptional designer who pairs strong technical design skills with natural taste and deep understanding of customer needs.',
+  name: 'Tom Nolan',
+  title: 'Product Manager',
+}
+
+export const process = [
+  {
+    number: '01.',
+    icon: 'search',
+    color: 'mint',
+    title: 'Identify',
+    description:
+      'I start by defining the problem, uncovering user needs, and aligning on business goals through research and discovery.',
+  },
+  {
+    number: '02.',
+    icon: 'pin',
+    color: 'blush',
+    title: 'Map',
+    description:
+      'I translate insights into clear opportunities, mapping out user journeys, identifying pain points, and prioritizing key objectives.',
+  },
+  {
+    number: '03.',
+    icon: 'palette',
+    color: 'peach',
+    title: 'Prototype',
+    description:
+      'I rapidly explore ideas through low- to high-fidelity prototypes to visualize and validate solutions early.',
+  },
+]
+
+export const tools = ['Figma', 'Framer', 'Lovable', 'ChatGPT', 'Whimsical']
+
+export const faqs = [
+  {
+    question: 'What kind of design work do you specialize in?',
+    answer:
+      "I specialize in end-to-end product design—research, UX, and UI—for web and SaaS products, with a growing focus on AI-powered workflows and design systems.",
+  },
+  {
+    question: 'Are you currently open to freelance or full-time opportunities?',
+    answer:
+      "Yes! I'm open to both freelance projects and full-time roles. Reach out below and let's talk about what you have in mind.",
+  },
+  {
+    question: 'Can you help with AI-powered design or automation projects?',
+    answer:
+      "Absolutely—at Klaviyo I helped shape Email AI, a modular AI-assisted email builder, so I have direct experience designing trustworthy, transparent AI workflows.",
+  },
+  {
+    question: 'Can I see more details about a specific project?',
+    answer:
+      "Definitely. Each case study below has a deeper dive, and I'm always happy to walk through the full story on a call.",
+  },
+]
+
+export const contactCards = [
+  { icon: 'pin', label: 'Location', value: site.location },
+  { icon: 'mail', label: 'Email me', value: site.email },
+  { icon: 'phone', label: 'Call me', value: site.phone },
+]

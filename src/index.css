@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Caveat", cursive;
+
+  --color-ink: #1c1c1e;
+  --color-paper: #fdfdfb;
+  --color-lilac: #dcdbf5;
+  --color-lilac-soft: #eceafb;
+  --color-mint: #d8f0c8;
+  --color-mint-soft: #ecf7e2;
+  --color-blush: #f4ddf4;
+  --color-peach: #fbdccb;
+  --color-sky: #d7e6fb;
+  --color-muted: #6b6b70;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.hand-border {
+  border: 1.5px solid var(--color-ink);
+}
+
+/* Doubled "sketchy" outline used on buttons/cards throughout the reference design */
+.sketch-shadow {
+  box-shadow: 3px 3px 0 0 var(--color-ink);
+}
+
+.dashed-divider {
+  border-top: 1.5px dashed #3b82f6;
+  opacity: 0.5;
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
