@@ -41,10 +41,10 @@ export default function Hero() {
               className="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
             />
           </div>
-          <div className="absolute -bottom-6 -right-4 flex items-center gap-2 rounded-2xl hand-border bg-blush px-4 py-4 sketch-shadow sm:-right-8">
+          <div className="absolute -bottom-6 -right-4 flex items-center gap-2 rounded-2xl hand-border bg-blush px-4 py-3 sketch-shadow sm:-right-8">
             <span className="font-script text-3xl leading-none">15+</span>
-            <span className="max-w-[9rem] text-xs font-medium leading-snug">
-              years of design experience
+            <span className="whitespace-nowrap text-xs font-medium leading-snug">
+              years in design
             </span>
           </div>
         </div>
