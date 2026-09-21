@@ -33,12 +33,11 @@ update the `base` path there to match.
 
 ## Swapping in your real content
 
-Everything on the site is placeholder-free except for assets that weren't
-available while rebuilding it. Search the codebase for `TODO` to find them,
-or replace directly:
+The headshot (`src/assets/headshot.webp`) and favicon (`public/favicon.png`)
+are already in place. A few assets weren't available while rebuilding and
+are still placeholders — search the codebase for `TODO` to find them, or
+replace directly:
 
-- **Headshot photo** — swap the `PlaceholderImage` in `src/sections/Hero.jsx`
-  and `src/sections/About.jsx` for a real `<img>`.
 - **Project screenshots** — swap the `PlaceholderImage` components in
   `src/sections/Work.jsx` and `src/pages/CaseStudy.jsx`.
 - **Resume PDF** — add `resume.pdf` to `/public` (referenced in

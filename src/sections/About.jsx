@@ -1,6 +1,6 @@
+import headshot from '../assets/headshot.webp'
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
-import PlaceholderImage from '../components/ui/PlaceholderImage'
 import TestimonialCarousel from '../components/TestimonialCarousel'
 import { career, site, testimonials } from '../data/site'
 
@@ -17,7 +17,7 @@ export default function About() {
           </div>
           <div className="mx-auto w-40 shrink-0 sm:w-48">
             <div className="overflow-hidden rounded-full hand-border">
-              <PlaceholderImage label="Headshot" aspect="aspect-square" className="rounded-full border-0" />
+              <img src={headshot} alt={site.name} className="aspect-square w-full object-cover" />
             </div>
           </div>
         </div>

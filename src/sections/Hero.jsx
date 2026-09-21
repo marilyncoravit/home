@@ -1,6 +1,6 @@
+import headshot from '../assets/headshot.webp'
 import Button from '../components/ui/Button'
 import Icon from '../components/ui/Icon'
-import PlaceholderImage from '../components/ui/PlaceholderImage'
 import { site } from '../data/site'
 
 export default function Hero() {
@@ -39,10 +39,10 @@ export default function Hero() {
         <div className="relative">
           <div className="absolute -left-6 -top-6 h-full w-full rounded-[2rem] bg-mint-soft sm:-left-8 sm:-top-8" />
           <div className="relative rounded-[2rem] hand-border bg-paper p-3">
-            <PlaceholderImage
-              label={`${site.name} — headshot`}
-              aspect="aspect-[4/5]"
-              className="rounded-[1.5rem]"
+            <img
+              src={headshot}
+              alt={site.name}
+              className="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
             />
           </div>
           <div className="absolute -bottom-6 -right-4 flex items-center gap-3 rounded-2xl hand-border bg-blush px-5 py-4 sketch-shadow sm:-right-8">
