@@ -134,7 +134,16 @@ export const process = [
   },
 ]
 
-export const tools = ['Figma', 'Framer', 'Lovable', 'ChatGPT', 'Whimsical']
+export const tools = [
+  'Figma',
+  'Framer',
+  'Lovable',
+  'ChatGPT',
+  'Whimsical',
+  'Copilot',
+  'VS Code',
+  'Claude Code',
+]
 
 export const faqs = [
   {
