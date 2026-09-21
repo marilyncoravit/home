@@ -10,15 +10,11 @@ export default function Hero() {
         name="sparkle"
         className="pointer-events-none absolute right-10 top-8 h-8 w-8 text-ink/70 sm:right-24"
       />
-      <Icon
-        name="star"
-        className="pointer-events-none absolute left-6 top-40 hidden h-6 w-6 text-ink/40 sm:block"
-      />
       <div className="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-ink/70 px-4 py-1 text-xs font-semibold uppercase tracking-wide">
             <Icon name="sparkle" className="h-3.5 w-3.5" />
-            15+ years of design experience
+            {site.role} &middot; {site.location}
           </span>
           <h1 className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
             Hi, I&rsquo;m {site.name.split(' ')[0]}. I design products people
@@ -46,9 +42,9 @@ export default function Hero() {
             />
           </div>
           <div className="absolute -bottom-6 -right-4 flex items-center gap-3 rounded-2xl hand-border bg-blush px-5 py-4 sketch-shadow sm:-right-8">
-            <span className="font-script text-3xl leading-none">4x</span>
+            <span className="font-script text-3xl leading-none">15+</span>
             <span className="max-w-[9rem] text-xs font-medium leading-snug">
-              average impact lift across shipped projects
+              years of design experience
             </span>
           </div>
         </div>
