@@ -1,4 +1,4 @@
-import { Navigate, useParams } from 'react-router-dom'
+import { Link, Navigate, useParams } from 'react-router-dom'
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
 import Icon from '../components/ui/Icon'
@@ -23,9 +23,13 @@ export default function CaseStudy() {
     <article>
       <section className={`px-6 pb-16 pt-14 ${colorMap[project.color]}`}>
         <div className="mx-auto max-w-6xl">
-          <Button to="/#work" variant="ghost" className="!px-4 !py-2 text-xs">
-            &larr; Back to work
-          </Button>
+          <Link
+            to="/#work"
+            className="inline-flex items-center gap-2 text-sm font-semibold transition-transform hover:-translate-x-0.5"
+          >
+            <Icon name="arrowRight" className="h-4 w-4 rotate-180" />
+            Back to work
+          </Link>
 
           <div className="mt-8">
             <Badge>{project.badge}</Badge>
