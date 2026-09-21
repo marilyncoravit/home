@@ -136,7 +136,6 @@ export const process = [
 
 export const tools = [
   'Figma',
-  'Framer',
   'Lovable',
   'ChatGPT',
   'Whimsical',
