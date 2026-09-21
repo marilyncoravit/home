@@ -13,14 +13,12 @@ export default function Work() {
   return (
     <section id="work" className="px-6 py-24">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-14 flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <Badge>Selected work</Badge>
-            <h2 className="mt-4 max-w-xl text-3xl font-extrabold leading-tight sm:text-4xl">
-              A few projects I&rsquo;m proud to have shaped end to end.
-            </h2>
-          </div>
-          <p className="max-w-sm text-sm text-muted">
+        <div className="mb-14 max-w-2xl">
+          <Badge>Selected work</Badge>
+          <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">
+            A few projects I&rsquo;m proud to have shaped end to end.
+          </h2>
+          <p className="mt-4 text-sm text-muted">
             From messy problem to shipped product—here&rsquo;s a look at how I work and what it drove.
           </p>
         </div>
