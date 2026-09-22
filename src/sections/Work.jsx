@@ -44,7 +44,7 @@ export default function Work() {
                     </span>
                   ))}
                 </div>
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full hand-border bg-paper transition-transform group-hover:translate-x-1">
+                <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full hand-border bg-paper transition-transform group-hover:translate-x-1">
                   <Icon name="arrowRight" className="h-4 w-4" />
                 </span>
               </div>
