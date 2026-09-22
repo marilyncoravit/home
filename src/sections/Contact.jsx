@@ -31,7 +31,12 @@ export default function Contact() {
           _captcha: 'false',
         }),
       })
-      if (!res.ok) throw new Error('Request failed')
+      const data = await res.json().catch(() => null)
+      // FormSubmit can return HTTP 200 even when it didn't actually
+      // deliver the message (e.g. the destination address still needs
+      // its one-time confirmation click), so check the payload too.
+      const succeeded = data?.success === true || data?.success === 'true'
+      if (!res.ok || !succeeded) throw new Error('Request failed')
       setStatus('sent')
       setForm(initialForm)
     } catch {
