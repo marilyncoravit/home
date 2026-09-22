@@ -1,6 +1,7 @@
 import Logo from './Logo'
 import Icon from './ui/Icon'
 import { site } from '../data/site'
+import useSectionNav from '../hooks/useSectionNav'
 
 const links = [
   { label: 'About', hash: '#about' },
@@ -9,6 +10,8 @@ const links = [
 ]
 
 export default function Footer() {
+  const goTo = useSectionNav()
+
   return (
     <footer className="bg-lilac">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-6 py-14 sm:flex-row">
@@ -16,7 +19,7 @@ export default function Footer() {
         <ul className="flex items-center gap-8 text-sm font-medium">
           {links.map((link) => (
             <li key={link.hash}>
-              <a href={link.hash} className="transition-colors hover:text-muted">
+              <a href={link.hash} onClick={goTo(link.hash)} className="transition-colors hover:text-muted">
                 {link.label}
               </a>
             </li>

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
 import Logo from './Logo'
 import Button from './ui/Button'
 import Icon from './ui/Icon'
+import useSectionNav from '../hooks/useSectionNav'
 
 const links = [
   { label: 'Work', hash: '#work' },
@@ -14,8 +14,7 @@ const links = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const location = useLocation()
-  const navigate = useNavigate()
+  const goTo = useSectionNav(() => setMenuOpen(false))
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -23,16 +22,6 @@ export default function Nav() {
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
-  const goTo = (hash) => (e) => {
-    e.preventDefault()
-    setMenuOpen(false)
-    if (location.pathname !== '/') {
-      navigate(`/${hash}`)
-      return
-    }
-    document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' })
-  }
 
   return (
     <header
