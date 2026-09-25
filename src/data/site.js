@@ -3,6 +3,8 @@ export const site = {
   role: 'Product Designer',
   location: 'Greater Boston',
   email: 'marilyncorahampton@gmail.com',
+  // FormSubmit alias for the email above, so the address isn't exposed in the form request
+  formsubmitId: '06228297f9d1dc1599d1bd4e211cbd4f',
   phone: '(508) 847-8500',
   linkedin: 'https://www.linkedin.com/in/marilyncora/',
   resumeHref: `${import.meta.env.BASE_URL}resume.pdf`, // TODO: drop your real resume PDF into /public/resume.pdf
