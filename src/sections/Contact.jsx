@@ -20,7 +20,7 @@ export default function Contact() {
     try {
       // No server on this static site: FormSubmit relays the message
       // straight to my inbox without needing a backend.
-      const res = await fetch(`https://formsubmit.co/ajax/${site.email}`, {
+      const res = await fetch(`https://formsubmit.co/ajax/${site.formsubmitId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
