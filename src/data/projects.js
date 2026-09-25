@@ -1,4 +1,6 @@
-import brandLibraryScreenshot from '../assets/brand-library-screenshot.webp'
+import brandLibraryHome from '../assets/Brandlibaryhome.webp'
+import blCase1 from '../assets/BLCase1.webp'
+import blCase2 from '../assets/BLCase2.png'
 
 export const projects = [
   {
@@ -9,7 +11,8 @@ export const projects = [
     role: 'Design Lead',
     client: 'Klaviyo',
     color: 'lilac',
-    image: brandLibraryScreenshot,
+    image: brandLibraryHome,
+    screenshots: [blCase1, blCase2],
     problem:
       'Every time users started a new email or form, they had to rebuild their brand from scratch, adding logos, colors, and fonts again and again. This repetitive setup process slowed them down, introduced inconsistencies across channels, and made it difficult to maintain a unified brand presence.',
     approach:

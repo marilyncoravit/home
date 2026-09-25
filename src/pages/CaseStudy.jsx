@@ -46,8 +46,18 @@ export default function CaseStudy() {
           </div>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            <PlaceholderImage label={`${project.title}, screenshot 1`} />
-            <PlaceholderImage label={`${project.title}, screenshot 2`} />
+            {[0, 1].map((i) =>
+              project.screenshots?.[i] ? (
+                <img
+                  key={i}
+                  src={project.screenshots[i]}
+                  alt={`${project.title}, screenshot ${i + 1}`}
+                  className="aspect-[4/3] w-full rounded-2xl object-cover"
+                />
+              ) : (
+                <PlaceholderImage key={i} label={`${project.title}, screenshot ${i + 1}`} />
+              ),
+            )}
           </div>
         </div>
       </section>
