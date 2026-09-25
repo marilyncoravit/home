@@ -118,7 +118,7 @@ export default function Contact() {
           <h3 className="mx-auto mt-4 max-w-lg text-3xl font-extrabold leading-tight">
             Got a project in mind?
             <br />
-            Get in touch.
+            Let&rsquo;s chat.
           </h3>
         </div>
 
