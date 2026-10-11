@@ -45,20 +45,28 @@ export default function CaseStudy() {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {[0, 1].map((i) =>
-              project.screenshots?.[i] ? (
-                <img
-                  key={i}
-                  src={project.screenshots[i]}
-                  alt={`${project.title}, screenshot ${i + 1}`}
-                  className="aspect-[4/3] w-full rounded-2xl object-cover"
-                />
-              ) : (
-                <PlaceholderImage key={i} label={`${project.title}, screenshot ${i + 1}`} />
-              ),
-            )}
-          </div>
+          {project.screenshots?.length === 1 ? (
+            <img
+              src={project.screenshots[0]}
+              alt={`${project.title} screenshot`}
+              className="mt-10 aspect-[16/9] w-full rounded-2xl object-cover"
+            />
+          ) : (
+            <div className="mt-10 grid gap-6 sm:grid-cols-2">
+              {[0, 1].map((i) =>
+                project.screenshots?.[i] ? (
+                  <img
+                    key={i}
+                    src={project.screenshots[i]}
+                    alt={`${project.title}, screenshot ${i + 1}`}
+                    className="aspect-[4/3] w-full rounded-2xl object-cover"
+                  />
+                ) : (
+                  <PlaceholderImage key={i} label={`${project.title}, screenshot ${i + 1}`} />
+                ),
+              )}
+            </div>
+          )}
         </div>
       </section>
 
