@@ -14,6 +14,9 @@ export default function About() {
             <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl">More about me</h2>
             <p className="mt-4 text-lg font-medium">{site.tagline}</p>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">{site.bio}</p>
+            <Button href={site.linkedin} variant="secondary" className="mt-6" target="_blank" rel="noreferrer">
+              Connect on LinkedIn
+            </Button>
           </div>
           <div className="mx-auto w-40 shrink-0 sm:w-48">
             <div className="overflow-hidden rounded-full hand-border">
