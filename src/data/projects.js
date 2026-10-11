@@ -1,5 +1,6 @@
 import brandLibraryHome from '../assets/Brandlibaryhome.webp'
 import blCase1Video from '../assets/BLCase1.mp4'
+import emailAIHome from '../assets/EmailAIhome.webp'
 
 export const projects = [
   {
@@ -32,6 +33,7 @@ export const projects = [
     role: 'Product Designer',
     client: 'Klaviyo',
     color: 'peach',
+    image: emailAIHome,
     problem:
       'Creating on-brand, high-performing emails in Klaviyo was time-consuming. Users often started from a blank canvas and struggled to design layouts that balanced brand consistency with best practices for conversion.',
     approach:
