@@ -49,7 +49,7 @@ export default function CaseStudy() {
             <img
               src={project.screenshots[0]}
               alt={`${project.title} screenshot`}
-              className="mt-10 aspect-[16/9] w-full rounded-2xl object-cover"
+              className="mt-10 w-full rounded-2xl"
             />
           ) : (
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
