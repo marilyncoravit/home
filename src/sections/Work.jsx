@@ -35,7 +35,7 @@ export default function Work() {
                 <img
                   src={project.image}
                   alt={`${project.title} screenshot`}
-                  className="mt-6 aspect-[4/3] w-full rounded-2xl object-cover"
+                  className="mt-6 aspect-[4/3] w-full rounded-2xl bg-paper object-contain"
                 />
               ) : (
                 <PlaceholderImage label={`${project.title} screenshot`} className="mt-6" />
