@@ -45,7 +45,16 @@ export default function CaseStudy() {
             </div>
           </div>
 
-          {project.screenshots?.length === 1 ? (
+          {project.caseVideo ? (
+            <video
+              src={project.caseVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="mt-10 w-full rounded-2xl"
+            />
+          ) : project.screenshots?.length === 1 ? (
             <img
               src={project.screenshots[0]}
               alt={`${project.title} screenshot`}
