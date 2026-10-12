@@ -152,5 +152,12 @@ export const faqs = [
 ]
 
 export const contactCards = [
-  { icon: 'mail', label: 'Prefer email?', value: site.email, href: `mailto:${site.email}` },
+  { icon: 'mail', label: 'Prefer email?', cta: 'Email me', href: `mailto:${site.email}` },
+  {
+    icon: 'linkedin',
+    label: 'Prefer LinkedIn?',
+    cta: 'Connect',
+    href: site.linkedin,
+    external: true,
+  },
 ]

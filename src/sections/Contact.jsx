@@ -119,7 +119,7 @@ export default function Contact() {
           </form>
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 flex flex-wrap justify-center gap-6">
           {contactCards.map((card) => (
             <div
               key={card.label}
@@ -129,8 +129,14 @@ export default function Contact() {
                 <Icon name={card.icon} className="h-5 w-5" />
               </span>
               <p className="font-bold">{card.label}</p>
-              <Button href={card.href} variant="secondary" className="mt-2 !px-4 !py-2 text-sm">
-                Email me
+              <Button
+                href={card.href}
+                variant="secondary"
+                className="mt-2 !px-4 !py-2 text-sm"
+                target={card.external ? '_blank' : undefined}
+                rel={card.external ? 'noreferrer' : undefined}
+              >
+                {card.cta}
                 <Icon name="arrowRight" className="h-4 w-4 -rotate-45" />
               </Button>
             </div>
