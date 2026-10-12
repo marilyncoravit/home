@@ -8,7 +8,8 @@ export const site = {
   resumeHref: `${import.meta.env.BASE_URL}resume.pdf`,
   tagline: "I'm Marilyn Hampton, a product designer based in Massachusetts.",
   bio: "My work is rooted in designing experiences that are both human-centered and future-ready, leveraging AI, data, and design thinking to craft products that inform, inspire, and empower. I thrive on turning ideas into experiences that feel as intuitive as they are impactful.",
-  heroIntro: "My work is human-centered, shaped by research, sharpened with AI, and built to make a meaningful impact.",
+  heroIntro:
+    'I bring clarity to complex product challenges, connect teams around a shared vision, and help designers do their best work. With 15+ years in design, I combine hands-on expertise with strategic thinking to create meaningful experiences and lasting impact.',
 }
 
 export const career = [
