@@ -62,7 +62,7 @@ export default function Contact() {
             exploring a leadership opportunity, I&rsquo;d love to connect.
           </p>
         </div>
-        <div className="mx-auto mt-10 max-w-xl rounded-3xl hand-border bg-paper p-6 sm:p-8">
+        <div className="mx-auto mt-10 max-w-[41.5rem] rounded-3xl hand-border bg-paper p-6 sm:p-8">
           <form onSubmit={onSubmit} className="space-y-3">
             <div className="grid gap-3">
               <label className="block text-sm">

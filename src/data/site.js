@@ -155,7 +155,7 @@ export const contactCards = [
   { icon: 'mail', label: 'Prefer email?', cta: 'Email me', href: `mailto:${site.email}` },
   {
     icon: 'linkedin',
-    label: 'View my LinkedIn',
+    label: 'Connect on LinkedIn',
     cta: 'Connect',
     href: site.linkedin,
     external: true,

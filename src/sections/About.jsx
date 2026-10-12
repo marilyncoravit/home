@@ -16,7 +16,7 @@ function Stars() {
 
 export default function About() {
   return (
-    <section id="about" className="relative px-6 py-24">
+    <section id="about" className="relative px-6 pt-24 pb-12">
       <div className="mx-auto max-w-6xl">
         <div className="grid items-start gap-10 xl:grid-cols-[2.4fr_1fr]">
           <div>
@@ -99,7 +99,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-24 text-center">
           <p className="text-sm font-medium text-muted">Tools I work with:</p>
           <div className="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-lg font-semibold">
             {tools.map((tool, i) => (
