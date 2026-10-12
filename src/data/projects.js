@@ -33,6 +33,9 @@ export const projects = [
       { value: '4x', label: 'More page visits' },
       { value: 'Scalable foundation', label: 'For future AI-powered experiences' },
     ],
+    futureHeading: 'Built for what comes next',
+    futureCopy:
+      "Beyond simplifying everyday workflows, Brand Library established a scalable foundation for future AI-powered experiences. By centralizing brand assets and making them reusable across Klaviyo, the redesign created opportunities for more consistent, personalized, and brand-aware content creation.",
   },
   {
     slug: 'email-ai',

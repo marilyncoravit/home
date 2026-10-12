@@ -106,6 +106,13 @@ export default function CaseStudy() {
             ))}
           </div>
         </div>
+
+        {project.futureHeading && (
+          <div className="mx-auto mt-14 max-w-3xl text-center">
+            <h2 className="text-2xl font-bold sm:text-3xl">{project.futureHeading}</h2>
+            <p className="mt-4 text-sm leading-relaxed text-muted">{project.futureCopy}</p>
+          </div>
+        )}
       </section>
 
       <section className="border-t border-ink/10 bg-lilac px-6 py-16 text-center">
