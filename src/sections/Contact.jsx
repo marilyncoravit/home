@@ -52,13 +52,19 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-lilac px-6 py-24">
       <div className="mx-auto max-w-4xl">
-        <div className="rounded-3xl hand-border bg-paper p-8 sm:p-12">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold sm:text-4xl">Let&rsquo;s connect.</h2>
-          </div>
-
-          <form onSubmit={onSubmit} className="mt-10 space-y-6">
-            <div className="grid gap-6 sm:grid-cols-2">
+        <div className="text-center">
+          <Badge>Contact</Badge>
+          <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">
+            Let&rsquo;s build something meaningful.
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-sm text-muted">
+            Whether you&rsquo;re building a design team, tackling a complex challenge, or
+            exploring a leadership opportunity, I&rsquo;d love to connect.
+          </p>
+        </div>
+        <div className="mx-auto mt-10 max-w-[41.5rem] rounded-3xl hand-border bg-paper p-6 sm:p-8">
+          <form onSubmit={onSubmit} className="space-y-4">
+            <div className="grid gap-4">
               <label className="block text-sm">
                 <span className="font-medium text-muted">Name</span>
                 <input
@@ -86,25 +92,25 @@ export default function Contact() {
               <span className="font-medium text-muted">Message</span>
               <textarea
                 required
-                rows={4}
+                rows={3}
                 value={form.message}
                 onChange={onChange('message')}
-                placeholder="Tell me about your project *"
+                placeholder="What would you like to chat about? *"
                 className="mt-2 w-full resize-none border-b border-ink/30 bg-transparent py-2 text-ink outline-none placeholder:text-muted focus:border-ink"
               />
             </label>
 
-            <div className="pt-2 text-center">
+            <div className="text-center">
               <Button type="submit" variant="secondary" disabled={status === 'sending'}>
                 {status === 'sending' ? 'Sending…' : 'Submit'}
               </Button>
               {status === 'sent' && (
-                <p className="mt-4 text-sm text-muted">
+                <p role="status" className="mt-4 text-sm text-muted">
                   Thanks for reaching out! Your message is on its way, and I&rsquo;ll reply soon.
                 </p>
               )}
               {status === 'error' && (
-                <p className="mt-4 text-sm text-muted">
+                <p role="status" className="mt-4 text-sm text-muted">
                   Something went wrong, so I&rsquo;ve opened your email app instead. Send it over
                   and I&rsquo;ll reply soon.
                 </p>
@@ -113,34 +119,28 @@ export default function Contact() {
           </form>
         </div>
 
-        <div className="mt-16 text-center">
-          <Badge>Contact</Badge>
-          <h3 className="mx-auto mt-4 max-w-lg text-3xl font-extrabold leading-tight">
-            Have a project in mind?
-            <br />
-            Let&rsquo;s chat.
-          </h3>
-        </div>
-
-        <div className="mt-10 grid gap-6 sm:grid-cols-3">
-          {contactCards.map((card) => {
-            const Tag = card.href ? 'a' : 'div'
-            return (
-              <Tag
-                key={card.label}
+        <div className="mt-10 flex flex-wrap justify-center gap-6">
+          {contactCards.map((card) => (
+            <div
+              key={card.label}
+              className="flex w-full max-w-xs flex-col items-center gap-2 rounded-2xl hand-border bg-paper p-6 text-center"
+            >
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full hand-border bg-mint-soft">
+                <Icon name={card.icon} className="h-5 w-5" />
+              </span>
+              <p className="font-bold">{card.label}</p>
+              <Button
                 href={card.href}
-                className={`flex flex-col items-center gap-2 rounded-2xl hand-border bg-paper p-6 text-center ${
-                  card.href ? 'transition-transform hover:-translate-y-0.5' : ''
-                }`}
+                variant="secondary"
+                className="mt-2 !px-4 !py-2 text-sm"
+                target={card.external ? '_blank' : undefined}
+                rel={card.external ? 'noreferrer' : undefined}
               >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full hand-border bg-mint-soft">
-                  <Icon name={card.icon} className="h-5 w-5" />
-                </span>
-                <p className="font-bold">{card.label}</p>
-                <p className="text-sm text-muted">{card.value}</p>
-              </Tag>
-            )
-          })}
+                {card.cta}
+                <Icon name="arrowRight" className="h-4 w-4 -rotate-45" />
+              </Button>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -6,9 +6,13 @@ export const site = {
   phone: '(508) 847-8500',
   linkedin: 'https://www.linkedin.com/in/marilyncora/',
   resumeHref: `${import.meta.env.BASE_URL}resume.pdf`,
-  tagline: "I'm Marilyn Hampton, a product designer based in Massachusetts.",
-  bio: "My work is rooted in designing experiences that are both human-centered and future-ready, leveraging AI, data, and design thinking to craft products that inform, inspire, and empower. I thrive on turning ideas into experiences that feel as intuitive as they are impactful.",
-  heroIntro: "My work is human-centered, shaped by research, sharpened with AI, and built to make a meaningful impact.",
+  tagline: "I'm Marilyn Hampton, a Principal Product Designer based in Massachusetts.",
+  bioParagraphs: [
+    "With 15+ years of experience, I've built my career around making complex things feel simple. I love connecting the dots between people, technology, and business needs to create thoughtful experiences that make a difference.",
+    'Beyond the design work itself, I enjoy mentoring others, exchanging ideas, and helping teams find clarity and move forward together.',
+  ],
+  heroIntro:
+    'I bring clarity to complex product challenges, connect teams around a shared vision, and help designers do their best work. With 15+ years in design, I combine hands-on expertise with strategic thinking to create meaningful experiences and lasting impact.',
 }
 
 export const career = [
@@ -38,18 +42,19 @@ export const career = [
   },
 ]
 
+export const mentorshipTestimonial = {
+  quote:
+    "Marilyn soon became my mentor through the department's mentorship program. We had weekly meetings for 2 years where she coached me, answered my questions, and kept our space judgment‑free.",
+  name: 'Lauren Tripp',
+  title: 'Product & Content Designer',
+}
+
 export const testimonials = [
   {
     quote:
       'Marilyn was always proactive, with excellent communication skills and an eye for detail. She kept the project moving and anyone would be lucky to work with her.',
     name: 'Jenn Brisebios',
     title: 'Customer Experience Manager',
-  },
-  {
-    quote:
-      "Marilyn soon became my mentor through the department's mentorship program. We had weekly meetings for 2 years where she coached me, answered my questions, and kept our space judgment-free.",
-    name: 'Lauren Tripp',
-    title: 'Content Designer',
   },
   {
     quote:
@@ -85,52 +90,32 @@ export const testimonials = [
 
 export const process = [
   {
-    number: '01.',
-    icon: 'search',
+    number: '01',
     color: 'mint',
-    title: 'Identify',
+    title: 'Create clarity',
     description:
-      'I start by defining the problem, uncovering user needs, and aligning on business goals through research and discovery, using AI to speed up competitive analysis and communicate findings clearly.',
+      'Turn ambiguity into shared understanding, align teams around the right problems, and establish clear priorities.',
   },
   {
-    number: '02.',
-    icon: 'pin',
+    number: '02',
+    color: 'lilac',
+    title: 'Lead through collaboration',
+    description:
+      'Build strong partnerships across product, engineering, research, and design to move ideas forward.',
+  },
+  {
+    number: '03',
     color: 'blush',
-    title: 'Map',
+    title: 'Grow people and ideas',
     description:
-      'I translate insights into clear opportunities, mapping out user journeys, identifying pain points, and prioritizing key objectives.',
+      'Support designers through mentorship, constructive feedback, and opportunities to experiment, learn, and grow.',
   },
   {
-    number: '03.',
-    icon: 'palette',
-    color: 'peach',
-    title: 'Prototype',
-    description:
-      'I rapidly explore ideas through low- to high-fidelity prototypes to visualize and validate solutions early, leveraging AI tools to speed up iteration and communicate concepts clearly.',
-  },
-  {
-    number: '04.',
-    icon: 'sliders',
+    number: '04',
     color: 'butter',
-    title: 'Apply',
+    title: 'Design for lasting impact',
     description:
-      'I refine designs based on feedback, ensuring the solution fits both user expectations and technical realities.',
-  },
-  {
-    number: '05.',
-    icon: 'monitor',
-    color: 'sky',
-    title: 'Communicate',
-    description:
-      'I share outcomes and rationale with cross-functional teams to maintain clarity and alignment.',
-  },
-  {
-    number: '06.',
-    icon: 'trendUp',
-    color: 'mint',
-    title: 'Track',
-    description:
-      'I measure success post-launch, gather insights, and use them to inform future iterations.',
+      'Balance user needs, business outcomes, and scalable systems to deliver meaningful improvements.',
   },
 ]
 
@@ -150,27 +135,32 @@ export const faqs = [
   {
     question: 'What kind of design work do you specialize in?',
     answer:
-      'End-to-end product design for complex web and SaaS products, with a focus on AI-powered workflows and design systems.',
+      'I specialize in designing intuitive experiences for complex SaaS and enterprise products. My experience spans everything from core product workflows and design systems to AI-powered experiences, always with a focus on solving real problems for users.',
+  },
+  {
+    question: 'What do you bring to a team?',
+    answer:
+      'I bring a mix of strategic thinking, hands-on design expertise, and a collaborative mindset. I enjoy tackling complex challenges, shaping product direction, mentoring designers, and helping teams turn good ideas into great experiences.',
   },
   {
     question: 'Are you open to new opportunities?',
     answer:
-      "I'm always open to conversations about meaningful product-design and leadership opportunities.",
+      "Absolutely! I'm interested in Principal Product Designer and design leadership opportunities where I can influence product direction, collaborate with talented teams, and create meaningful impact.",
   },
   {
-    question: 'Can you help with AI-powered products?',
+    question: 'Can I see more of your recent work?',
     answer:
-      'Yes. I design AI-assisted experiences that make complex workflows feel clear, useful, and trustworthy.',
-  },
-  {
-    question: 'Can I learn more about a specific project?',
-    answer:
-      "Absolutely. Some work can't be shared publicly, but I'm happy to walk through additional details in a conversation.",
+      "Some of my recent projects aren't featured publicly due to confidentiality. I'm happy to discuss the challenges, design decisions, and contributions behind that work during the interview process.",
   },
 ]
 
 export const contactCards = [
-  { icon: 'pin', label: 'Location', value: site.location },
-  { icon: 'mail', label: 'Email me', value: site.email, href: `mailto:${site.email}` },
-  { icon: 'phone', label: 'Call me', value: site.phone },
+  { icon: 'mail', label: 'Prefer email?', cta: 'Email me', href: `mailto:${site.email}` },
+  {
+    icon: 'linkedin',
+    label: 'Connect on LinkedIn',
+    cta: 'Connect',
+    href: site.linkedin,
+    external: true,
+  },
 ]

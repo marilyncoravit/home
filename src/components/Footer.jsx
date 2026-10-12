@@ -4,8 +4,9 @@ import { site } from '../data/site'
 import useSectionNav from '../hooks/useSectionNav'
 
 const links = [
+  { label: 'Work', hash: '#work' },
+  { label: 'Philosophy', hash: '#process' },
   { label: 'About', hash: '#about' },
-  { label: 'Process', hash: '#process' },
   { label: 'Contact', hash: '#contact' },
 ]
 

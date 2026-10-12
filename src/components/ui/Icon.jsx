@@ -67,6 +67,12 @@ const paths = {
       <path d="M16 6h4v4" />
     </>
   ),
+  lock: (
+    <>
+      <rect x="5" y="11" width="14" height="9" rx="2" />
+      <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+    </>
+  ),
 }
 
 export default function Icon({ name, className = 'h-5 w-5', strokeWidth = 1.6 }) {

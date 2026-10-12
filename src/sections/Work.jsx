@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import Badge from '../components/ui/Badge'
+import Button from '../components/ui/Button'
 import Icon from '../components/ui/Icon'
 import PlaceholderImage from '../components/ui/PlaceholderImage'
 import { projects } from '../data/projects'
+import { site } from '../data/site'
 
 const colorMap = {
   lilac: 'bg-lilac-soft',
@@ -16,10 +18,15 @@ export default function Work() {
         <div className="mb-14 max-w-2xl">
           <Badge>Selected work</Badge>
           <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">
-            A few projects I&rsquo;m proud to have shaped end to end.
+            Thoughtful design.
+            <br />
+            Meaningful impact.
           </h2>
           <p className="mt-4 text-sm text-muted">
-            From messy problem to shipped product: here&rsquo;s a look at how I work and what it drove.
+            A selection of projects where I&rsquo;ve turned complex challenges into intuitive
+            experiences,
+            <br />
+            from early exploration through delivery.
           </p>
         </div>
 
@@ -35,7 +42,7 @@ export default function Work() {
                 <img
                   src={project.image}
                   alt={`${project.title} screenshot`}
-                  className="mt-6 aspect-[4/3] w-full rounded-2xl bg-paper object-contain"
+                  className="mt-6 aspect-[16/9] w-full rounded-2xl bg-paper object-contain"
                 />
               ) : (
                 <PlaceholderImage label={`${project.title} screenshot`} className="mt-6" />
@@ -58,6 +65,23 @@ export default function Work() {
               </div>
             </Link>
           ))}
+        </div>
+
+        <div className="mt-8 rounded-3xl hand-border bg-sky/60 p-6 sm:p-8">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-muted">
+            <Icon name="lock" className="h-4 w-4" />
+            Additional work
+          </div>
+          <h3 className="mt-2 text-2xl font-bold">More work behind the scenes.</h3>
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
+            My recent work spans enterprise customer service, AI-assisted workflows, and
+            complex product experiences. While some projects can&rsquo;t be shared publicly,
+            I&rsquo;m happy to discuss my approach and contributions in more detail.
+          </p>
+          <Button href={`mailto:${site.email}`} variant="secondary" className="mt-4">
+            Let&rsquo;s talk about it
+            <Icon name="arrowRight" className="h-4 w-4 -rotate-45" />
+          </Button>
         </div>
       </div>
     </section>

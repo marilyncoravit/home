@@ -1,7 +1,13 @@
 import Badge from '../components/ui/Badge'
 import Icon from '../components/ui/Icon'
-import ProcessCarousel from '../components/ProcessCarousel'
-import { process, tools } from '../data/site'
+import { process } from '../data/site'
+
+const colorMap = {
+  mint: 'bg-mint-soft',
+  lilac: 'bg-lilac-soft',
+  blush: 'bg-blush/60',
+  butter: 'bg-butter/60',
+}
 
 export default function Process() {
   return (
@@ -12,24 +18,20 @@ export default function Process() {
       />
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
-          <Badge>Process</Badge>
+          <Badge>Design Philosophy</Badge>
           <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-extrabold leading-tight sm:text-4xl">
-            I work efficiently with a focus on making a meaningful impact.
+            Great design starts with clarity, collaboration, and people.
           </h2>
         </div>
 
-        <ProcessCarousel steps={process} />
-
-        <div className="mt-16 text-center">
-          <p className="text-sm font-medium text-muted">The tools behind my process:</p>
-          <div className="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-lg font-semibold">
-            {tools.map((tool, i) => (
-              <span key={tool} className="flex items-center gap-2">
-                {tool}
-                {i < tools.length - 1 && <span className="text-ink/30">&#8727;</span>}
-              </span>
-            ))}
-          </div>
+        <div className="mt-14 grid gap-6 sm:grid-cols-2">
+          {process.map((step) => (
+            <div key={step.title} className={`rounded-2xl hand-border p-8 ${colorMap[step.color]}`}>
+              <span className="text-sm font-semibold text-muted">{step.number}</span>
+              <h3 className="mt-2 text-2xl font-bold">{step.title}</h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted">{step.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

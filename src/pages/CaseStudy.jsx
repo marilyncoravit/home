@@ -52,6 +52,7 @@ export default function CaseStudy() {
               loop
               muted
               playsInline
+              aria-label={`${project.title} product walkthrough`}
               className="mt-10 w-full rounded-2xl"
             />
           ) : project.screenshots?.length === 1 ? (

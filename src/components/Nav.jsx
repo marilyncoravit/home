@@ -6,7 +6,7 @@ import useSectionNav from '../hooks/useSectionNav'
 
 const links = [
   { label: 'Work', hash: '#work' },
-  { label: 'Process', hash: '#process' },
+  { label: 'Philosophy', hash: '#process' },
   { label: 'About', hash: '#about' },
   { label: 'Contact', hash: '#contact' },
 ]

@@ -6,9 +6,10 @@ import emailAICase1Video from '../assets/EmailAICase1.mp4'
 export const projects = [
   {
     slug: 'brand-library',
-    badge: 'End-to-end system redesign',
-    title: 'Brand library',
-    subtitle: 'Centralize your brand assets once and use them everywhere in Klaviyo',
+    badge: 'BRAND LIBRARY',
+    title: 'Making brand consistency effortless',
+    subtitle:
+      "Redesigned how customers manage and reuse brand assets across Klaviyo, simplifying workflows and creating a scalable foundation for future experiences.",
     role: 'Design Lead',
     client: 'Klaviyo',
     color: 'lilac',
@@ -21,16 +22,17 @@ export const projects = [
     impact:
       'The new experience drove a 4× increase in page visits, reduced asset retrieval time by 40%, and laid the groundwork for future AI-powered design tools.',
     stats: [
-      { value: '40%', label: 'reduction in asset retrieval time' },
-      { value: '4x', label: 'page visit increase' },
+      { value: '40%', label: 'faster asset retrieval' },
+      { value: '4x', label: 'increase in page visits' },
       { value: '100%', label: 'laid groundwork for AI-powered design tools' },
     ],
   },
   {
     slug: 'email-ai',
-    badge: 'AI-powered workflow design',
-    title: 'Email AI',
-    subtitle: 'AI that builds your next section for you.',
+    badge: 'EMAIL AI',
+    title: 'Bringing AI into the creative workflow',
+    subtitle:
+      'Designed an AI-assisted email creation experience that helps customers move from ideas to content faster while maintaining creative control.',
     role: 'Product Designer',
     client: 'Klaviyo',
     color: 'peach',
@@ -43,8 +45,8 @@ export const projects = [
     impact:
       'The launch of Email AI gave users a faster, more flexible way to build emails while maintaining brand consistency and control. Early feedback showed increased confidence in AI-generated content, higher engagement with the editor, and faster time-to-publish, validating a design approach that balances automation with user intent.',
     stats: [
-      { value: '60%', label: 'Quicker to first draft' },
-      { value: '4x', label: 'more concept iterations explored in early testing' },
+      { value: '60%', label: 'faster to first draft' },
+      { value: '4x', label: 'more concepts explored in early testing' },
       { value: '85%', label: 'of users reported easier content creation' },
     ],
   },
