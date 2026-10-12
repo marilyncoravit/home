@@ -34,9 +34,7 @@ export default function CaseStudy() {
           <div className="mt-8">
             <Badge>{project.badge}</Badge>
             <h1 className="mt-4 text-4xl font-extrabold sm:text-5xl">{project.title}</h1>
-            <p className="mt-2 max-w-2xl text-lg text-muted">
-              {project.caseSubtitle ?? project.subtitle}
-            </p>
+            <p className="mt-2 text-lg text-muted">{project.caseSubtitle ?? project.subtitle}</p>
             <div className="mt-6 flex flex-wrap gap-x-10 gap-y-2 text-sm">
               <p>
                 <span className="font-semibold">Role:</span> {project.role}
