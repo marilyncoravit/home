@@ -20,7 +20,7 @@ export default function Process() {
         <div className="text-center">
           <Badge>Leadership Philosophy</Badge>
           <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-extrabold leading-tight sm:text-4xl">
-            I work efficiently with a focus on making a meaningful impact.
+            Great design starts with clarity, collaboration, and people.
           </h2>
         </div>
 
