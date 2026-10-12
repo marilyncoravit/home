@@ -54,7 +54,13 @@ export default function Contact() {
       <div className="mx-auto max-w-4xl">
         <div className="rounded-3xl hand-border bg-paper p-8 sm:p-12">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold sm:text-4xl">Let&rsquo;s connect.</h2>
+            <h2 className="text-3xl font-extrabold sm:text-4xl">
+              Let&rsquo;s build something meaningful.
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-sm text-muted">
+              Interested in working together or discussing a design leadership opportunity?
+              I&rsquo;d love to connect.
+            </p>
           </div>
 
           <form onSubmit={onSubmit} className="mt-10 space-y-6">
