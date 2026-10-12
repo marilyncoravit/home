@@ -18,7 +18,7 @@ export default function About() {
   return (
     <section id="about" className="relative px-6 py-24">
       <div className="mx-auto max-w-6xl">
-        <div className="grid items-start gap-10 lg:grid-cols-[1.4fr_1fr]">
+        <div className="grid items-start gap-10 xl:grid-cols-[2.4fr_1fr]">
           <div>
             <Badge>About</Badge>
             <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl">A little about me</h2>
