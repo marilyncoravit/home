@@ -52,10 +52,12 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-lilac px-6 py-24">
       <div className="mx-auto max-w-4xl">
-        <div className="rounded-3xl hand-border bg-paper p-8 sm:p-12">
+        <div className="text-center">
+          <Badge>Contact</Badge>
+        </div>
+        <div className="mt-6 rounded-3xl hand-border bg-paper p-8 sm:p-12">
           <div className="text-center">
-            <Badge>Contact</Badge>
-            <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl">
+            <h2 className="text-3xl font-extrabold sm:text-4xl">
               Let&rsquo;s build something meaningful.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm text-muted">
