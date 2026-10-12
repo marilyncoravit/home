@@ -102,7 +102,7 @@ export default function CaseStudy() {
           </div>
         </div>
 
-        <div className="mx-auto mt-14 max-w-6xl rounded-3xl hand-border p-10">
+        <div className="mx-auto mt-14 max-w-4xl rounded-3xl hand-border p-10">
           <div
             className={`grid gap-8 text-center ${statsColsMap[(project.caseStats ?? project.stats).length] ?? 'sm:grid-cols-3'}`}
           >
