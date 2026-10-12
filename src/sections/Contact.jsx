@@ -54,11 +54,13 @@ export default function Contact() {
       <div className="mx-auto max-w-4xl">
         <div className="rounded-3xl hand-border bg-paper p-8 sm:p-12">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold sm:text-4xl">
+            <Badge>Contact</Badge>
+            <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl">
               Let&rsquo;s build something meaningful.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm text-muted">
               Interested in working together or discussing a design leadership opportunity?
+              <br />
               I&rsquo;d love to connect.
             </p>
           </div>
@@ -119,23 +121,14 @@ export default function Contact() {
           </form>
         </div>
 
-        <div className="mt-16 text-center">
-          <Badge>Contact</Badge>
-          <h3 className="mx-auto mt-4 max-w-lg text-3xl font-extrabold leading-tight">
-            Have a project in mind?
-            <br />
-            Let&rsquo;s chat.
-          </h3>
-        </div>
-
-        <div className="mt-10 grid gap-6 sm:grid-cols-3">
+        <div className="mt-10 flex justify-center">
           {contactCards.map((card) => {
             const Tag = card.href ? 'a' : 'div'
             return (
               <Tag
                 key={card.label}
                 href={card.href}
-                className={`flex flex-col items-center gap-2 rounded-2xl hand-border bg-paper p-6 text-center ${
+                className={`flex w-full max-w-xs flex-col items-center gap-2 rounded-2xl hand-border bg-paper p-6 text-center ${
                   card.href ? 'transition-transform hover:-translate-y-0.5' : ''
                 }`}
               >
