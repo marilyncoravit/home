@@ -41,7 +41,7 @@ export const career = [
 
 export const mentorshipTestimonial = {
   quote:
-    "Marilyn soon became my mentor through the department's mentorship program. We had weekly meetings for 2 years where she coached me, answered my questions, and kept our space judgment-free.",
+    "Marilyn soon became my mentor through the department's mentorship program. We had weekly meetings for 2 years where she coached me, answered my questions, and kept our space judgment‑free.",
   name: 'Lauren Tripp',
   title: 'Content Designer',
 }
