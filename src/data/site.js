@@ -6,8 +6,11 @@ export const site = {
   phone: '(508) 847-8500',
   linkedin: 'https://www.linkedin.com/in/marilyncora/',
   resumeHref: `${import.meta.env.BASE_URL}resume.pdf`,
-  tagline: "I'm Marilyn Hampton, a product designer and design leader based in Massachusetts.",
-  bio: "I love turning complex challenges into simple, thoughtful experiences. With 15+ years in design, I bring together creative problem-solving, strategic thinking, and a genuine passion for helping people and teams grow. I'm especially energized by emerging technology, meaningful collaboration, and the opportunity to make a lasting impact.",
+  tagline: "I'm Marilyn Hampton, a Principal Product Designer based in Massachusetts.",
+  bioParagraphs: [
+    "With 15+ years of experience, I've built my career around making complex things feel simple. I love connecting the dots between people, technology, and business needs to create thoughtful experiences that make a difference.",
+    'Beyond the design work itself, I enjoy mentoring others, exchanging ideas, and helping teams find clarity and move forward together.',
+  ],
   heroIntro:
     'I bring clarity to complex product challenges, connect teams around a shared vision, and help designers do their best work. With 15+ years in design, I combine hands-on expertise with strategic thinking to create meaningful experiences and lasting impact.',
 }

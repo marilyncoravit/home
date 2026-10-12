@@ -23,7 +23,11 @@ export default function About() {
             <Badge>About</Badge>
             <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl">A little about me</h2>
             <p className="mt-4 text-lg font-medium">{site.tagline}</p>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">{site.bio}</p>
+            {site.bioParagraphs.map((paragraph) => (
+              <p key={paragraph} className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
+                {paragraph}
+              </p>
+            ))}
             <Button href={site.linkedin} variant="secondary" className="mt-6" target="_blank" rel="noreferrer">
               Connect on LinkedIn
             </Button>
