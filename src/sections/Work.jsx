@@ -16,7 +16,9 @@ export default function Work() {
         <div className="mb-14 max-w-2xl">
           <Badge>Selected work</Badge>
           <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">
-            Thoughtful design. Meaningful impact.
+            Thoughtful design.
+            <br />
+            Meaningful impact.
           </h2>
           <p className="mt-4 text-sm text-muted">
             A selection of projects where I&rsquo;ve turned complex challenges into intuitive
@@ -36,7 +38,7 @@ export default function Work() {
                 <img
                   src={project.image}
                   alt={`${project.title} screenshot`}
-                  className="mt-6 aspect-[16/9] w-full rounded-2xl bg-paper object-cover"
+                  className="mt-6 aspect-[16/9] w-full rounded-2xl bg-paper object-contain"
                 />
               ) : (
                 <PlaceholderImage label={`${project.title} screenshot`} className="mt-6" />
