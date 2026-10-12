@@ -54,20 +54,17 @@ export default function Contact() {
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
           <Badge>Contact</Badge>
+          <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl">
+            Let&rsquo;s build something meaningful.
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-sm text-muted">
+            Interested in working together or discussing a design leadership opportunity?
+            <br />
+            I&rsquo;d love to connect.
+          </p>
         </div>
-        <div className="mt-6 rounded-3xl hand-border bg-paper p-8 sm:p-12">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold sm:text-4xl">
-              Let&rsquo;s build something meaningful.
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-sm text-muted">
-              Interested in working together or discussing a design leadership opportunity?
-              <br />
-              I&rsquo;d love to connect.
-            </p>
-          </div>
-
-          <form onSubmit={onSubmit} className="mt-10 space-y-6">
+        <div className="mt-10 rounded-3xl hand-border bg-paper p-8 sm:p-12">
+          <form onSubmit={onSubmit} className="space-y-6">
             <div className="grid gap-6 sm:grid-cols-2">
               <label className="block text-sm">
                 <span className="font-medium text-muted">Name</span>
