@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import Badge from '../components/ui/Badge'
+import Button from '../components/ui/Button'
 import Icon from '../components/ui/Icon'
 import PlaceholderImage from '../components/ui/PlaceholderImage'
 import { projects } from '../data/projects'
+import { site } from '../data/site'
 
 const colorMap = {
   lilac: 'bg-lilac-soft',
@@ -61,6 +63,25 @@ export default function Work() {
               </div>
             </Link>
           ))}
+        </div>
+
+        <div className="mt-8 rounded-3xl bg-ink p-10 text-paper sm:p-14">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-paper/60">
+            <Icon name="lock" className="h-4 w-4" />
+            Additional work
+          </div>
+          <h3 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">
+            More work behind the scenes.
+          </h3>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-paper/70 sm:text-base">
+            My recent work spans enterprise customer service, AI-assisted workflows, and
+            complex product experiences. While some projects can&rsquo;t be shared publicly,
+            I&rsquo;m happy to discuss my approach and contributions in more detail.
+          </p>
+          <Button href={`mailto:${site.email}`} variant="light" className="mt-6">
+            Let&rsquo;s talk about it
+            <Icon name="arrowRight" className="h-4 w-4 -rotate-45" />
+          </Button>
         </div>
       </div>
     </section>

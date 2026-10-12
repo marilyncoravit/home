@@ -7,6 +7,7 @@ const variants = {
   primary: `${base} bg-ink text-paper sketch-shadow hover:shadow-none`,
   secondary: `${base} bg-paper text-ink hand-border sketch-shadow hover:shadow-none`,
   ghost: `${base} bg-transparent text-ink border border-ink/40 hover:border-ink`,
+  light: `${base} bg-paper text-ink hover:bg-paper/90`,
 }
 
 export default function Button({
