@@ -26,7 +26,7 @@ export default function Process() {
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2">
           {process.map((step) => (
-            <div key={step.title} className={`rounded-2xl p-8 ${colorMap[step.color]}`}>
+            <div key={step.title} className={`rounded-2xl hand-border p-8 ${colorMap[step.color]}`}>
               <span className="text-sm font-semibold text-muted">{step.number}</span>
               <h3 className="mt-2 text-2xl font-bold">{step.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted">{step.description}</p>
