@@ -98,7 +98,7 @@ export default function CaseStudy() {
 
         <div className="mx-auto mt-14 max-w-6xl rounded-3xl hand-border p-10">
           <div className="grid gap-8 text-center sm:grid-cols-3">
-            {project.stats.map((stat) => (
+            {(project.caseStats ?? project.stats).map((stat) => (
               <div key={stat.label}>
                 <p className="text-4xl font-extrabold">{stat.value}</p>
                 <p className="mt-2 text-sm text-muted">{stat.label}</p>

@@ -28,6 +28,11 @@ export const projects = [
       { value: '4x', label: 'increase in page visits' },
       { value: '100%', label: 'laid groundwork for AI-powered design tools' },
     ],
+    caseStats: [
+      { value: '40%', label: 'Faster asset retrieval' },
+      { value: '4x', label: 'More page visits' },
+      { value: 'Scalable foundation', label: 'For future AI-powered experiences' },
+    ],
   },
   {
     slug: 'email-ai',
