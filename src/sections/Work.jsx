@@ -65,20 +65,18 @@ export default function Work() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-3xl bg-ink p-10 text-paper sm:p-14">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-paper/60">
+        <div className="mt-8 rounded-3xl hand-border bg-sky/60 p-6 sm:p-8">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-muted">
             <Icon name="lock" className="h-4 w-4" />
             Additional work
           </div>
-          <h3 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">
-            More work behind the scenes.
-          </h3>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-paper/70 sm:text-base">
+          <h3 className="mt-2 text-2xl font-bold">More work behind the scenes.</h3>
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
             My recent work spans enterprise customer service, AI-assisted workflows, and
             complex product experiences. While some projects can&rsquo;t be shared publicly,
             I&rsquo;m happy to discuss my approach and contributions in more detail.
           </p>
-          <Button href={`mailto:${site.email}`} variant="light" className="mt-6">
+          <Button href={`mailto:${site.email}`} variant="secondary" className="mt-4">
             Let&rsquo;s talk about it
             <Icon name="arrowRight" className="h-4 w-4 -rotate-45" />
           </Button>
