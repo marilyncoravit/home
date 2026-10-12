@@ -2,7 +2,7 @@ import aboutPhoto from '../assets/about-photo.webp'
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
 import Icon from '../components/ui/Icon'
-import { career, mentorshipTestimonial, site, testimonials, tools } from '../data/site'
+import { career, faqs, mentorshipTestimonial, site, testimonials, tools } from '../data/site'
 
 function Stars() {
   return (
@@ -83,6 +83,20 @@ export default function About() {
               <p className="text-xs text-muted">{t.title}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16">
+          <h3 className="text-center text-3xl font-extrabold sm:text-4xl">
+            A few things you might want to know.
+          </h3>
+          <div className="mx-auto mt-12 grid max-w-4xl gap-x-10 gap-y-8 sm:grid-cols-2">
+            {faqs.map((item) => (
+              <div key={item.question} className="border-t border-ink/15 pt-6">
+                <h4 className="text-lg font-bold">{item.question}</h4>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{item.answer}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-16 text-center">

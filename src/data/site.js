@@ -132,22 +132,22 @@ export const faqs = [
   {
     question: 'What kind of design work do you specialize in?',
     answer:
-      'End-to-end product design for complex web and SaaS products, with a focus on AI-powered workflows and design systems.',
+      'I specialize in designing intuitive experiences for complex SaaS and enterprise products. My experience spans everything from core product workflows and design systems to AI-powered experiences, always with a focus on solving real problems for users.',
+  },
+  {
+    question: 'What do you bring to a team?',
+    answer:
+      'I bring a mix of strategic thinking, hands-on design expertise, and a collaborative mindset. I enjoy tackling complex challenges, shaping product direction, mentoring designers, and helping teams turn good ideas into great experiences.',
   },
   {
     question: 'Are you open to new opportunities?',
     answer:
-      "I'm always open to conversations about meaningful product-design and leadership opportunities.",
+      "Absolutely! I'm interested in Principal Product Designer and design leadership opportunities where I can influence product direction, collaborate with talented teams, and create meaningful impact.",
   },
   {
-    question: 'Can you help with AI-powered products?',
+    question: 'Can I see more of your recent work?',
     answer:
-      'Yes. I design AI-assisted experiences that make complex workflows feel clear, useful, and trustworthy.',
-  },
-  {
-    question: 'Can I learn more about a specific project?',
-    answer:
-      "Absolutely. Some work can't be shared publicly, but I'm happy to walk through additional details in a conversation.",
+      "Some of my recent projects aren't featured publicly due to confidentiality. I'm happy to discuss the challenges, design decisions, and contributions behind that work during the interview process.",
   },
 ]
 
