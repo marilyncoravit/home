@@ -28,9 +28,9 @@ export default function About() {
               Connect on LinkedIn
             </Button>
           </div>
-          <div className="relative mx-auto w-40 shrink-0 sm:w-48">
-            <div className="absolute -right-4 -top-4 h-full w-full rounded-full bg-peach sm:-right-5 sm:-top-5" />
-            <div className="relative rounded-full hand-border bg-paper p-2">
+          <div className="relative mx-auto w-52 shrink-0 sm:w-64">
+            <div className="absolute -right-5 -top-5 h-full w-full rounded-full bg-peach sm:-right-6 sm:-top-6" />
+            <div className="relative rounded-full hand-border bg-paper p-4">
               <img
                 src={aboutPhoto}
                 alt={site.name}
