@@ -2,7 +2,7 @@ import aboutPhoto from '../assets/about-photo.webp'
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
 import TestimonialCarousel from '../components/TestimonialCarousel'
-import { career, site, testimonials } from '../data/site'
+import { career, site, testimonials, tools } from '../data/site'
 
 export default function About() {
   return (
@@ -51,6 +51,18 @@ export default function About() {
         </div>
 
         <TestimonialCarousel testimonials={testimonials} />
+
+        <div className="mt-16 text-center">
+          <p className="text-sm font-medium text-muted">Tools I work with:</p>
+          <div className="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-lg font-semibold">
+            {tools.map((tool, i) => (
+              <span key={tool} className="flex items-center gap-2">
+                {tool}
+                {i < tools.length - 1 && <span className="text-ink/30">&#8727;</span>}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

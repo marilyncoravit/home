@@ -1,6 +1,6 @@
 import Badge from '../components/ui/Badge'
 import Icon from '../components/ui/Icon'
-import { process, tools } from '../data/site'
+import { process } from '../data/site'
 
 const colorMap = {
   mint: 'bg-mint-soft',
@@ -32,18 +32,6 @@ export default function Process() {
               <p className="mt-3 text-sm leading-relaxed text-muted">{step.description}</p>
             </div>
           ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <p className="text-sm font-medium text-muted">The tools behind my process:</p>
-          <div className="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-lg font-semibold">
-            {tools.map((tool, i) => (
-              <span key={tool} className="flex items-center gap-2">
-                {tool}
-                {i < tools.length - 1 && <span className="text-ink/30">&#8727;</span>}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>
