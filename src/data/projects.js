@@ -18,11 +18,11 @@ export const projects = [
     image: brandLibraryHome,
     caseVideo: blCase1Video,
     problem:
-      'Every time users started a new email or form, they had to rebuild their brand from scratch, adding logos, colors, and fonts again and again. This repetitive setup process slowed them down, introduced inconsistencies across channels, and made it difficult to maintain a unified brand presence.',
+      'Customers repeatedly added the same logos, colors, and fonts when creating emails and forms, leading to wasted time and inconsistent branding.',
     approach:
-      "In collaboration with research, PM, engineers, and the design system team, I led the end-to-end redesign of Klaviyo's Brand Library, introducing an improved onboarding flow for adding brand assets up front and new in-editor tools that put logos, colors, and fonts right at users' fingertips.",
+      'Led the end-to-end redesign of Brand Library, partnering with research, product, engineering, and design systems to simplify asset setup and make brand elements accessible directly within the editor.',
     impact:
-      'The new experience drove a 4× increase in page visits, reduced asset retrieval time by 40%, and laid the groundwork for future AI-powered design tools.',
+      'Increased Brand Library page visits 4× and reduced asset retrieval time by 40%, helping customers create more consistent, on-brand experiences.',
     stats: [
       { value: '40%', label: 'faster asset retrieval' },
       { value: '4x', label: 'increase in page visits' },
