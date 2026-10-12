@@ -24,7 +24,9 @@ export default function Work() {
           </h2>
           <p className="mt-4 text-sm text-muted">
             A selection of projects where I&rsquo;ve turned complex challenges into intuitive
-            experiences, from early exploration through delivery.
+            experiences,
+            <br />
+            from early exploration through delivery.
           </p>
         </div>
 
