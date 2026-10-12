@@ -1,8 +1,18 @@
 import aboutPhoto from '../assets/about-photo.webp'
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
-import TestimonialCarousel from '../components/TestimonialCarousel'
-import { career, site, testimonials, tools } from '../data/site'
+import Icon from '../components/ui/Icon'
+import { career, mentorshipTestimonial, site, testimonials, tools } from '../data/site'
+
+function Stars() {
+  return (
+    <div className="flex justify-center gap-1 text-ink">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <Icon key={i} name="star" className="h-4 w-4" />
+      ))}
+    </div>
+  )
+}
 
 export default function About() {
   return (
@@ -23,6 +33,15 @@ export default function About() {
               <img src={aboutPhoto} alt={site.name} className="aspect-square w-full object-cover" />
             </div>
           </div>
+        </div>
+
+        <div className="mt-16 rounded-3xl hand-border bg-paper p-10 text-center sketch-shadow sm:p-14">
+          <Stars />
+          <p className="mx-auto mt-4 max-w-2xl text-xl font-medium leading-snug">
+            &ldquo;{mentorshipTestimonial.quote}&rdquo;
+          </p>
+          <p className="mt-6 font-bold">{mentorshipTestimonial.name}</p>
+          <p className="text-sm text-muted">{mentorshipTestimonial.title}</p>
         </div>
 
         <div className="mt-16 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
@@ -50,7 +69,16 @@ export default function About() {
           </ol>
         </div>
 
-        <TestimonialCarousel testimonials={testimonials} />
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((t) => (
+            <div key={t.name} className="flex flex-col rounded-2xl hand-border bg-paper p-6 text-center">
+              <Stars />
+              <p className="mt-4 flex-1 text-sm leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
+              <p className="mt-4 font-bold">{t.name}</p>
+              <p className="text-xs text-muted">{t.title}</p>
+            </div>
+          ))}
+        </div>
 
         <div className="mt-16 text-center">
           <p className="text-sm font-medium text-muted">Tools I work with:</p>

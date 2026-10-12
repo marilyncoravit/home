@@ -39,18 +39,19 @@ export const career = [
   },
 ]
 
+export const mentorshipTestimonial = {
+  quote:
+    "Marilyn soon became my mentor through the department's mentorship program. We had weekly meetings for 2 years where she coached me, answered my questions, and kept our space judgment-free.",
+  name: 'Lauren Tripp',
+  title: 'Content Designer',
+}
+
 export const testimonials = [
   {
     quote:
       'Marilyn was always proactive, with excellent communication skills and an eye for detail. She kept the project moving and anyone would be lucky to work with her.',
     name: 'Jenn Brisebios',
     title: 'Customer Experience Manager',
-  },
-  {
-    quote:
-      "Marilyn soon became my mentor through the department's mentorship program. We had weekly meetings for 2 years where she coached me, answered my questions, and kept our space judgment-free.",
-    name: 'Lauren Tripp',
-    title: 'Content Designer',
   },
   {
     quote:
