@@ -104,7 +104,7 @@ export const process = [
     color: 'blush',
     title: 'Grow people and ideas',
     description:
-      'Create space for thoughtful critique, mentorship, experimentation, and continuous learning.',
+      'Support designers through mentorship, constructive feedback, and opportunities to experiment, learn, and grow.',
   },
   {
     number: '04',
