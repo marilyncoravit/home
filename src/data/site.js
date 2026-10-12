@@ -86,52 +86,32 @@ export const testimonials = [
 
 export const process = [
   {
-    number: '01.',
-    icon: 'search',
+    number: '01',
     color: 'mint',
-    title: 'Identify',
+    title: 'Create clarity',
     description:
-      'I start by defining the problem, uncovering user needs, and aligning on business goals through research and discovery, using AI to speed up competitive analysis and communicate findings clearly.',
+      'Turn ambiguity into shared understanding, align teams around the right problems, and establish clear priorities.',
   },
   {
-    number: '02.',
-    icon: 'pin',
+    number: '02',
+    color: 'lilac',
+    title: 'Lead through collaboration',
+    description:
+      'Build strong partnerships across product, engineering, research, and design to move ideas forward.',
+  },
+  {
+    number: '03',
     color: 'blush',
-    title: 'Map',
+    title: 'Grow people and ideas',
     description:
-      'I translate insights into clear opportunities, mapping out user journeys, identifying pain points, and prioritizing key objectives.',
+      'Create space for thoughtful critique, mentorship, experimentation, and continuous learning.',
   },
   {
-    number: '03.',
-    icon: 'palette',
-    color: 'peach',
-    title: 'Prototype',
-    description:
-      'I rapidly explore ideas through low- to high-fidelity prototypes to visualize and validate solutions early, leveraging AI tools to speed up iteration and communicate concepts clearly.',
-  },
-  {
-    number: '04.',
-    icon: 'sliders',
+    number: '04',
     color: 'butter',
-    title: 'Apply',
+    title: 'Design for lasting impact',
     description:
-      'I refine designs based on feedback, ensuring the solution fits both user expectations and technical realities.',
-  },
-  {
-    number: '05.',
-    icon: 'monitor',
-    color: 'sky',
-    title: 'Communicate',
-    description:
-      'I share outcomes and rationale with cross-functional teams to maintain clarity and alignment.',
-  },
-  {
-    number: '06.',
-    icon: 'trendUp',
-    color: 'mint',
-    title: 'Track',
-    description:
-      'I measure success post-launch, gather insights, and use them to inform future iterations.',
+      'Balance user needs, business outcomes, and scalable systems to deliver meaningful improvements.',
   },
 ]
 
