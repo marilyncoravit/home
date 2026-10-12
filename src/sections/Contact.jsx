@@ -54,7 +54,7 @@ export default function Contact() {
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
           <Badge>Contact</Badge>
-          <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">
             Let&rsquo;s build something meaningful.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-muted">
@@ -63,8 +63,8 @@ export default function Contact() {
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-[41.5rem] rounded-3xl hand-border bg-paper p-6 sm:p-8">
-          <form onSubmit={onSubmit} className="space-y-3">
-            <div className="grid gap-3">
+          <form onSubmit={onSubmit} className="space-y-4">
+            <div className="grid gap-4">
               <label className="block text-sm">
                 <span className="font-medium text-muted">Name</span>
                 <input
@@ -73,7 +73,7 @@ export default function Contact() {
                   value={form.name}
                   onChange={onChange('name')}
                   placeholder="Your name *"
-                  className="mt-1.5 w-full border-b border-ink/30 bg-transparent py-1.5 text-ink outline-none placeholder:text-muted focus:border-ink"
+                  className="mt-2 w-full border-b border-ink/30 bg-transparent py-2 text-ink outline-none placeholder:text-muted focus:border-ink"
                 />
               </label>
               <label className="block text-sm">
@@ -84,7 +84,7 @@ export default function Contact() {
                   value={form.email}
                   onChange={onChange('email')}
                   placeholder="Email address *"
-                  className="mt-1.5 w-full border-b border-ink/30 bg-transparent py-1.5 text-ink outline-none placeholder:text-muted focus:border-ink"
+                  className="mt-2 w-full border-b border-ink/30 bg-transparent py-2 text-ink outline-none placeholder:text-muted focus:border-ink"
                 />
               </label>
             </div>
@@ -96,7 +96,7 @@ export default function Contact() {
                 value={form.message}
                 onChange={onChange('message')}
                 placeholder="What would you like to chat about? *"
-                className="mt-1.5 w-full resize-none border-b border-ink/30 bg-transparent py-1.5 text-ink outline-none placeholder:text-muted focus:border-ink"
+                className="mt-2 w-full resize-none border-b border-ink/30 bg-transparent py-2 text-ink outline-none placeholder:text-muted focus:border-ink"
               />
             </label>
 
@@ -105,12 +105,12 @@ export default function Contact() {
                 {status === 'sending' ? 'Sending…' : 'Submit'}
               </Button>
               {status === 'sent' && (
-                <p className="mt-4 text-sm text-muted">
+                <p role="status" className="mt-4 text-sm text-muted">
                   Thanks for reaching out! Your message is on its way, and I&rsquo;ll reply soon.
                 </p>
               )}
               {status === 'error' && (
-                <p className="mt-4 text-sm text-muted">
+                <p role="status" className="mt-4 text-sm text-muted">
                   Something went wrong, so I&rsquo;ve opened your email app instead. Send it over
                   and I&rsquo;ll reply soon.
                 </p>

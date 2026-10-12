@@ -6,7 +6,7 @@ import { career, faqs, mentorshipTestimonial, site, testimonials, tools } from '
 
 function Stars() {
   return (
-    <div className="flex justify-center gap-1 text-ink">
+    <div className="flex justify-center gap-2 text-ink">
       {Array.from({ length: 5 }).map((_, i) => (
         <Icon key={i} name="star" className="h-4 w-4" />
       ))}
@@ -21,7 +21,7 @@ export default function About() {
         <div className="grid items-start gap-10 xl:grid-cols-[2.4fr_1fr]">
           <div>
             <Badge>About</Badge>
-            <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl">A little about me</h2>
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">A little about me</h2>
             <p className="mt-4 text-lg font-medium">{site.tagline}</p>
             {site.bioParagraphs.map((paragraph) => (
               <p key={paragraph} className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
