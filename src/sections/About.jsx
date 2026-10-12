@@ -44,7 +44,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-16 rounded-3xl hand-border bg-paper p-10 text-center sketch-shadow sm:p-14">
+        <div className="mx-auto mt-16 max-w-3xl rounded-3xl hand-border bg-paper p-10 text-center sketch-shadow sm:p-14">
           <Stars />
           <p className="mx-auto mt-4 max-w-2xl text-xl font-medium leading-snug">
             &ldquo;{mentorshipTestimonial.quote}&rdquo;
