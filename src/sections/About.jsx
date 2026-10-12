@@ -30,8 +30,12 @@ export default function About() {
           </div>
           <div className="relative mx-auto w-40 shrink-0 sm:w-48">
             <div className="absolute -right-4 -top-4 h-full w-full rounded-full bg-peach sm:-right-5 sm:-top-5" />
-            <div className="relative overflow-hidden rounded-full hand-border">
-              <img src={aboutPhoto} alt={site.name} className="aspect-square w-full object-cover" />
+            <div className="relative rounded-full hand-border bg-paper p-2">
+              <img
+                src={aboutPhoto}
+                alt={site.name}
+                className="aspect-square w-full rounded-full object-cover"
+              />
             </div>
           </div>
         </div>
