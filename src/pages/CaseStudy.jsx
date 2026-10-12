@@ -11,6 +11,12 @@ const colorMap = {
   peach: 'bg-peach/40',
 }
 
+const statsColsMap = {
+  1: 'sm:grid-cols-1',
+  2: 'sm:grid-cols-2',
+  3: 'sm:grid-cols-3',
+}
+
 export default function CaseStudy() {
   const { slug } = useParams()
   const project = getProject(slug)
@@ -97,7 +103,9 @@ export default function CaseStudy() {
         </div>
 
         <div className="mx-auto mt-14 max-w-6xl rounded-3xl hand-border p-10">
-          <div className="grid gap-8 text-center sm:grid-cols-3">
+          <div
+            className={`grid gap-8 text-center ${statsColsMap[(project.caseStats ?? project.stats).length] ?? 'sm:grid-cols-3'}`}
+          >
             {(project.caseStats ?? project.stats).map((stat) => (
               <div key={stat.label}>
                 <p className="text-4xl font-extrabold">{stat.value}</p>

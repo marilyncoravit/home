@@ -31,7 +31,6 @@ export const projects = [
     caseStats: [
       { value: '40%', label: 'Faster asset retrieval' },
       { value: '4x', label: 'More page visits' },
-      { value: 'Scalable foundation', label: 'For future AI-powered experiences' },
     ],
     futureHeading: 'Built for what comes next',
     futureCopy:
