@@ -10,7 +10,9 @@ export const projects = [
     title: 'Making brand consistency effortless',
     subtitle:
       "Redesigned how customers manage and reuse brand assets across Klaviyo, simplifying workflows and creating a scalable foundation for future experiences.",
-    role: 'Design Lead',
+    caseSubtitle:
+      "Led the redesign of Klaviyo's Brand Library, making it easier for customers to manage and reuse brand assets across their marketing experiences. From simplifying onboarding to bringing brand assets directly into the editor, the work improved everyday workflows and created a foundation for future AI-powered capabilities.",
+    role: 'Lead Product Designer',
     client: 'Klaviyo',
     color: 'lilac',
     image: brandLibraryHome,
