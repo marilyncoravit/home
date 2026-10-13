@@ -32,9 +32,14 @@ export const projects = [
       { value: '40%', label: 'Faster asset retrieval' },
       { value: '4x', label: 'More page visits' },
     ],
-    futureHeading: 'Built for what comes next',
-    futureCopy:
-      "Beyond simplifying everyday workflows, Brand Library established a scalable foundation for future AI-powered experiences. By centralizing brand assets and making them reusable across Klaviyo, the redesign created opportunities for more consistent, personalized, and brand-aware content creation.",
+    futureHeading: 'Rethinking how brand assets work',
+    futureParagraphs: [
+      'Research revealed that customers needed more than a place to store brand assets. They wanted to quickly establish their brand identity and have it consistently applied across their marketing experiences.',
+      'The existing architecture kept brand elements disconnected, making it difficult to distinguish between stored assets and the defaults used in templates.',
+      'The solution was to separate asset management from brand defaults while connecting both directly to the editor.',
+      'This gave customers the flexibility to manage multiple logos, colors, and fonts, choose their preferred defaults, and easily swap assets without interrupting their workflow.',
+      'The result was a more connected experience that simplified everyday tasks while creating a foundation for future brand-aware and AI-powered capabilities.',
+    ],
   },
   {
     slug: 'email-ai',

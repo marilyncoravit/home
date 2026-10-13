@@ -116,9 +116,15 @@ export default function CaseStudy() {
         </div>
 
         {project.futureHeading && (
-          <div className="mx-auto mt-14 max-w-3xl text-center">
-            <h2 className="text-2xl font-bold sm:text-3xl">{project.futureHeading}</h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted">{project.futureCopy}</p>
+          <div className="mx-auto mt-14 max-w-6xl">
+            <div className="max-w-2xl">
+              <h2 className="text-2xl font-bold sm:text-3xl">{project.futureHeading}</h2>
+              {project.futureParagraphs.map((paragraph) => (
+                <p key={paragraph} className="mt-4 text-sm leading-relaxed text-muted">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
         )}
       </section>
