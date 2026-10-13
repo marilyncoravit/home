@@ -117,13 +117,18 @@ export default function CaseStudy() {
         </div>
 
         {project.futureHeading && (
-          <div className="mx-auto mt-14 grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
+          <div className="mx-auto mt-14 grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-start">
             <div className="max-w-2xl">
               <h2 className="text-2xl font-bold sm:text-3xl">{project.futureHeading}</h2>
-              {project.futureParagraphs.map((paragraph) => (
-                <p key={paragraph} className="mt-4 text-sm leading-relaxed text-muted">
-                  {paragraph}
-                </p>
+              {project.futureSections.map((fsection) => (
+                <div key={fsection.heading} className="mt-6 first:mt-4">
+                  <h3 className="text-lg font-bold">{fsection.heading}</h3>
+                  {fsection.paragraphs.map((paragraph) => (
+                    <p key={paragraph} className="mt-2 text-sm leading-relaxed text-muted">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               ))}
             </div>
             {project.showDiagram && <BrandLibraryDiagram />}

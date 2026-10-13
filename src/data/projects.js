@@ -33,12 +33,26 @@ export const projects = [
       { value: '4x', label: 'More page visits' },
     ],
     futureHeading: 'Rethinking how brand assets work',
-    futureParagraphs: [
-      'Research revealed that customers needed more than a place to store brand assets. They wanted to quickly establish their brand identity and have it consistently applied across their marketing experiences.',
-      'The existing architecture kept brand elements disconnected, making it difficult to distinguish between stored assets and the defaults used in templates.',
-      'The solution was to separate asset management from brand defaults while connecting both directly to the editor.',
-      'This gave customers the flexibility to manage multiple logos, colors, and fonts, choose their preferred defaults, and easily swap assets without interrupting their workflow.',
-      'The result was a more connected experience that simplified everyday tasks while creating a foundation for future brand-aware and AI-powered capabilities.',
+    futureSections: [
+      {
+        heading: 'The insight',
+        paragraphs: [
+          'Customers were duplicating existing emails rather than starting with new templates to avoid rebuilding their branding each time. What appeared to be a content creation preference was actually a workaround for maintaining brand consistency.',
+        ],
+      },
+      {
+        heading: 'The design decision',
+        paragraphs: [
+          'I proposed introducing primary brand defaults, allowing customers to select their preferred logos, colors, and fonts and have them automatically applied to new templates.',
+          'Working closely with product and engineering, I helped align the team around this approach and incorporate it into a redesigned Brand Library architecture that separated stored assets from primary defaults while keeping both accessible within the editor.',
+        ],
+      },
+      {
+        heading: 'Why it mattered',
+        paragraphs: [
+          'This transformed Brand Library from a place to store assets into a connected system that could apply brand identity throughout the creation experience, reducing repetitive setup and laying the foundation for future brand-aware capabilities.',
+        ],
+      },
     ],
     showDiagram: true,
   },
