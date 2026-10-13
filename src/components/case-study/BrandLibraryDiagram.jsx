@@ -1,6 +1,7 @@
 import blColors from '../../assets/BLColors.webp'
 import blDefaults from '../../assets/BLDefaults.webp'
 import blEditor from '../../assets/BLEditor.webp'
+import blEditorCase from '../../assets/BLEditorCase.mp4'
 import Icon from '../ui/Icon'
 
 export default function BrandLibraryDiagram() {
@@ -42,6 +43,15 @@ export default function BrandLibraryDiagram() {
         <img
           src={blEditor}
           alt="Email editor experience screenshot"
+          className="mx-auto mt-4 aspect-[16/9] w-full max-w-3xl rounded-2xl hand-border object-cover object-top"
+        />
+        <video
+          src={blEditorCase}
+          autoPlay
+          loop
+          muted
+          playsInline
+          aria-label="Email editor experience walkthrough"
           className="mx-auto mt-4 aspect-[16/9] w-full max-w-3xl rounded-2xl hand-border object-cover object-top"
         />
       </div>
