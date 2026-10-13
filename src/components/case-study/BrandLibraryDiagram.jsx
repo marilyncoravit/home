@@ -3,25 +3,13 @@ import blDefaults from '../../assets/BLDefaults.webp'
 import blEditor from '../../assets/BLEditor.webp'
 import Icon from '../ui/Icon'
 
-const chips = ['Logos', 'Colors', 'Fonts', 'Buttons', 'Social links']
-
 export default function BrandLibraryDiagram() {
   return (
     <div className="mt-10">
-      <div className="grid gap-6 sm:grid-cols-2">
-        <div className="rounded-3xl hand-border bg-lilac-soft p-8 text-center">
+      <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-stretch sm:gap-4">
+        <div className="flex-1 rounded-3xl hand-border bg-lilac-soft p-8 text-center">
           <p className="text-xl font-bold">Brand</p>
-          <div className="mt-4 flex flex-wrap justify-center gap-2">
-            {chips.map((chip) => (
-              <span
-                key={chip}
-                className="rounded-full hand-border bg-paper px-4 py-2 text-xs font-semibold"
-              >
-                {chip}
-              </span>
-            ))}
-          </div>
-          <p className="mt-4 text-sm text-muted">Store and manage brand assets</p>
+          <p className="mt-2 text-sm text-muted">Store and manage brand assets</p>
           <img
             src={blColors}
             alt="Brand colors management screenshot"
@@ -29,7 +17,9 @@ export default function BrandLibraryDiagram() {
           />
         </div>
 
-        <div className="rounded-3xl hand-border bg-sky p-8 text-center">
+        <Icon name="arrowRight" className="h-4 w-4 shrink-0 rotate-90 text-muted sm:rotate-0" />
+
+        <div className="flex-1 rounded-3xl hand-border bg-sky p-8 text-center">
           <p className="text-xl font-bold">Defaults</p>
           <p className="mt-2 text-sm text-muted">Choose primary assets for templates</p>
           <img
