@@ -45,6 +45,17 @@ export default function BrandLibraryDiagram() {
           alt="Email editor experience screenshot"
           className="mx-auto mt-4 aspect-[16/9] w-full max-w-3xl rounded-2xl hand-border object-cover object-top"
         />
+
+        <div className="mx-auto mt-10 max-w-2xl text-left">
+          <h3 className="text-xl font-bold">Making brand setup effortless</h3>
+          <h4 className="mt-4 text-lg font-bold">The opportunity</h4>
+          <p className="mt-2 text-sm leading-relaxed text-muted">
+            Setting up a brand from scratch required customers to manually add their logos,
+            colors, and fonts. We introduced a website scraping feature during onboarding to
+            help new users quickly populate their Brand Library and establish their defaults.
+          </p>
+        </div>
+
         <video
           src={blEditorCase}
           autoPlay
