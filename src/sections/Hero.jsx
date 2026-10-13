@@ -5,7 +5,7 @@ import { site } from '../data/site'
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden px-6 pb-24 pt-16 sm:pt-24">
+    <section className="relative overflow-hidden px-6 pb-16 pt-16 sm:pt-24">
       <Icon
         name="sparkle"
         className="pointer-events-none absolute right-10 top-8 h-8 w-8 text-ink/70 sm:right-24"

@@ -13,7 +13,7 @@ const colorMap = {
 
 export default function Work() {
   return (
-    <section id="work" className="px-6 py-24">
+    <section id="work" className="px-6 pb-24 pt-16">
       <div className="mx-auto max-w-6xl">
         <div className="mb-14 max-w-2xl">
           <Badge>Selected work</Badge>
