@@ -1,4 +1,5 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
+import BrandLibraryDiagram from '../components/case-study/BrandLibraryDiagram'
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
 import Icon from '../components/ui/Icon'
@@ -9,6 +10,12 @@ import { site } from '../data/site'
 const colorMap = {
   lilac: 'bg-lilac',
   peach: 'bg-peach/40',
+}
+
+const statsColsMap = {
+  1: 'sm:grid-cols-1',
+  2: 'sm:grid-cols-2',
+  3: 'sm:grid-cols-3',
 }
 
 export default function CaseStudy() {
@@ -34,7 +41,7 @@ export default function CaseStudy() {
           <div className="mt-8">
             <Badge>{project.badge}</Badge>
             <h1 className="mt-4 text-4xl font-extrabold sm:text-5xl">{project.title}</h1>
-            <p className="mt-2 max-w-2xl text-lg text-muted">{project.subtitle}</p>
+            <p className="mt-2 text-lg text-muted">{project.caseSubtitle ?? project.subtitle}</p>
             <div className="mt-6 flex flex-wrap gap-x-10 gap-y-2 text-sm">
               <p>
                 <span className="font-semibold">Role:</span> {project.role}
@@ -96,9 +103,11 @@ export default function CaseStudy() {
           </div>
         </div>
 
-        <div className="mx-auto mt-14 max-w-6xl rounded-3xl hand-border p-10">
-          <div className="grid gap-8 text-center sm:grid-cols-3">
-            {project.stats.map((stat) => (
+        <div className="mx-auto mt-14 max-w-4xl rounded-3xl hand-border p-10">
+          <div
+            className={`grid gap-8 text-center ${statsColsMap[(project.caseStats ?? project.stats).length] ?? 'sm:grid-cols-3'}`}
+          >
+            {(project.caseStats ?? project.stats).map((stat) => (
               <div key={stat.label}>
                 <p className="text-4xl font-extrabold">{stat.value}</p>
                 <p className="mt-2 text-sm text-muted">{stat.label}</p>
@@ -106,6 +115,48 @@ export default function CaseStudy() {
             ))}
           </div>
         </div>
+
+        {project.futureHeading && (
+          <div className="mx-auto mt-14 max-w-6xl">
+            <h2 className="text-2xl font-bold sm:text-3xl">{project.futureHeading}</h2>
+            {project.futureSections.map((fsection) => (
+              <div key={fsection.heading} className="mt-6 first:mt-4">
+                <h3 className="text-lg font-bold">{fsection.heading}</h3>
+                {fsection.paragraphs.map((paragraph) => (
+                  <p key={paragraph} className="mt-2 text-sm leading-relaxed text-muted">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            ))}
+            {project.showDiagram && <BrandLibraryDiagram />}
+
+            {project.takeawaysIntro && (
+              <div className="mt-14">
+                <p className="max-w-3xl text-lg font-medium leading-relaxed">
+                  {project.takeawaysIntro}
+                </p>
+                <div className="mt-10 grid gap-10 md:grid-cols-3">
+                  {project.takeaways.map((item) => (
+                    <div key={item.heading}>
+                      <h3 className="text-lg font-bold">{item.heading}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted">{item.body}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {project.beyondHeading && (
+              <div className="mt-14 rounded-3xl hand-border bg-lilac-soft p-10">
+                <h3 className="text-2xl font-bold sm:text-3xl">{project.beyondHeading}</h3>
+                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">
+                  {project.beyondCopy}
+                </p>
+              </div>
+            )}
+          </div>
+        )}
       </section>
 
       <section className="border-t border-ink/10 bg-lilac px-6 py-16 text-center">
