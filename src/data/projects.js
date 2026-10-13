@@ -71,6 +71,9 @@ export const projects = [
         body: 'By creating a more connected system for managing and applying brand assets, we solved immediate workflow challenges while establishing a foundation that could support future AI-powered experiences.',
       },
     ],
+    beyondHeading: 'Beyond the redesign',
+    beyondCopy:
+      "What began as an effort to simplify brand management evolved into a more connected foundation for creating on-brand content across Klaviyo. Seeing that foundation contribute to the evolution of Klaviyo's AI-powered marketing experiences has reinforced something I value in design: the most meaningful work continues creating value long after launch.",
   },
   {
     slug: 'email-ai',

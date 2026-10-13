@@ -146,6 +146,15 @@ export default function CaseStudy() {
                 </div>
               </div>
             )}
+
+            {project.beyondHeading && (
+              <div className="mt-14 rounded-3xl hand-border bg-lilac-soft p-10">
+                <h3 className="text-2xl font-bold sm:text-3xl">{project.beyondHeading}</h3>
+                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">
+                  {project.beyondCopy}
+                </p>
+              </div>
+            )}
           </div>
         )}
       </section>
