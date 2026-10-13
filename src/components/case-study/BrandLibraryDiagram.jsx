@@ -1,5 +1,4 @@
 import blColors from '../../assets/BLColors.webp'
-import blDashboard from '../../assets/BLDashboard.webp'
 import blDefaults from '../../assets/BLDefaults.webp'
 import blEditor from '../../assets/BLEditor.webp'
 import Icon from '../ui/Icon'
@@ -43,11 +42,6 @@ export default function BrandLibraryDiagram() {
         <img
           src={blEditor}
           alt="Email editor experience screenshot"
-          className="mx-auto mt-4 aspect-[16/9] w-full max-w-3xl rounded-2xl hand-border object-cover object-top"
-        />
-        <img
-          src={blDashboard}
-          alt="Klaviyo account dashboard screenshot"
           className="mx-auto mt-4 aspect-[16/9] w-full max-w-3xl rounded-2xl hand-border object-cover object-top"
         />
       </div>
