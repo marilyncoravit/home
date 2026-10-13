@@ -56,7 +56,7 @@ export default function BrandLibraryDiagram() {
           </p>
         </div>
 
-        <div className="mt-10 grid items-center gap-8 lg:grid-cols-2">
+        <div className="mt-10 grid items-start gap-8 lg:grid-cols-2">
           <div className="text-left">
             <h4 className="text-lg font-bold">The challenge</h4>
             <p className="mt-2 text-sm leading-relaxed text-muted">
