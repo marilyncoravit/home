@@ -56,15 +56,32 @@ export default function BrandLibraryDiagram() {
           </p>
         </div>
 
-        <video
-          src={blEditorCase}
-          autoPlay
-          loop
-          muted
-          playsInline
-          aria-label="Email editor experience walkthrough"
-          className="mx-auto mt-4 aspect-[16/9] w-full max-w-3xl rounded-2xl hand-border object-cover object-top"
-        />
+        <div className="mt-10 grid items-center gap-8 lg:grid-cols-2">
+          <div className="text-left">
+            <h4 className="text-lg font-bold">The challenge</h4>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              Extracting brand information was only part of the problem. Making sure the
+              scraper returned results that matched users&rsquo; expectations required close
+              collaboration with product management, data science, and engineering.
+            </p>
+            <h4 className="mt-6 text-lg font-bold">My contribution</h4>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              I worked closely with these teams to refine how extracted brand assets were
+              presented and incorporated into the onboarding experience, with a focus on
+              making the process intuitive and giving customers a clear starting point for
+              their brand.
+            </p>
+          </div>
+          <video
+            src={blEditorCase}
+            autoPlay
+            loop
+            muted
+            playsInline
+            aria-label="Email editor experience walkthrough"
+            className="aspect-[16/9] w-full rounded-2xl hand-border object-cover object-top"
+          />
+        </div>
       </div>
     </div>
   )
