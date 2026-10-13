@@ -118,19 +118,17 @@ export default function CaseStudy() {
 
         {project.futureHeading && (
           <div className="mx-auto mt-14 max-w-6xl">
-            <div className="max-w-2xl">
-              <h2 className="text-2xl font-bold sm:text-3xl">{project.futureHeading}</h2>
-              {project.futureSections.map((fsection) => (
-                <div key={fsection.heading} className="mt-6 first:mt-4">
-                  <h3 className="text-lg font-bold">{fsection.heading}</h3>
-                  {fsection.paragraphs.map((paragraph) => (
-                    <p key={paragraph} className="mt-2 text-sm leading-relaxed text-muted">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              ))}
-            </div>
+            <h2 className="text-2xl font-bold sm:text-3xl">{project.futureHeading}</h2>
+            {project.futureSections.map((fsection) => (
+              <div key={fsection.heading} className="mt-6 first:mt-4">
+                <h3 className="text-lg font-bold">{fsection.heading}</h3>
+                {fsection.paragraphs.map((paragraph) => (
+                  <p key={paragraph} className="mt-2 text-sm leading-relaxed text-muted">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            ))}
             {project.showDiagram && <BrandLibraryDiagram />}
           </div>
         )}

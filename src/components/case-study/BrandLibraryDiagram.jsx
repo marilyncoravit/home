@@ -6,8 +6,8 @@ import Icon from '../ui/Icon'
 export default function BrandLibraryDiagram() {
   return (
     <div className="mt-10">
-      <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-stretch sm:gap-4">
-        <div className="flex-1 rounded-3xl hand-border bg-lilac-soft p-8 text-center">
+      <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-4">
+        <div className="flex-1 self-stretch rounded-3xl hand-border bg-lilac-soft p-8 text-center">
           <p className="text-xl font-bold">Brand</p>
           <p className="mt-2 text-sm text-muted">Store and manage brand assets</p>
           <img
@@ -17,9 +17,9 @@ export default function BrandLibraryDiagram() {
           />
         </div>
 
-        <Icon name="arrowRight" className="h-4 w-4 shrink-0 rotate-90 text-muted sm:rotate-0" />
+        <Icon name="arrowRight" className="h-6 w-6 shrink-0 rotate-90 text-muted sm:rotate-0" />
 
-        <div className="flex-1 rounded-3xl hand-border bg-sky p-8 text-center">
+        <div className="flex-1 self-stretch rounded-3xl hand-border bg-sky p-8 text-center">
           <p className="text-xl font-bold">Defaults</p>
           <p className="mt-2 text-sm text-muted">Choose primary assets for templates</p>
           <img
