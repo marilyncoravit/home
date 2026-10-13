@@ -117,7 +117,7 @@ export default function CaseStudy() {
         </div>
 
         {project.futureHeading && (
-          <div className="mx-auto mt-14 grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-start">
+          <div className="mx-auto mt-14 max-w-6xl">
             <div className="max-w-2xl">
               <h2 className="text-2xl font-bold sm:text-3xl">{project.futureHeading}</h2>
               {project.futureSections.map((fsection) => (
