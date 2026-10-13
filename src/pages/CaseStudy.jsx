@@ -1,4 +1,5 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
+import BrandLibraryDiagram from '../components/case-study/BrandLibraryDiagram'
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
 import Icon from '../components/ui/Icon'
@@ -116,7 +117,7 @@ export default function CaseStudy() {
         </div>
 
         {project.futureHeading && (
-          <div className="mx-auto mt-14 max-w-6xl">
+          <div className="mx-auto mt-14 grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
             <div className="max-w-2xl">
               <h2 className="text-2xl font-bold sm:text-3xl">{project.futureHeading}</h2>
               {project.futureParagraphs.map((paragraph) => (
@@ -125,6 +126,7 @@ export default function CaseStudy() {
                 </p>
               ))}
             </div>
+            {project.showDiagram && <BrandLibraryDiagram />}
           </div>
         )}
       </section>

@@ -40,6 +40,7 @@ export const projects = [
       'This gave customers the flexibility to manage multiple logos, colors, and fonts, choose their preferred defaults, and easily swap assets without interrupting their workflow.',
       'The result was a more connected experience that simplified everyday tasks while creating a foundation for future brand-aware and AI-powered capabilities.',
     ],
+    showDiagram: true,
   },
   {
     slug: 'email-ai',
