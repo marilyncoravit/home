@@ -130,6 +130,22 @@ export default function CaseStudy() {
               </div>
             ))}
             {project.showDiagram && <BrandLibraryDiagram />}
+
+            {project.takeawaysIntro && (
+              <div className="mt-14">
+                <p className="max-w-3xl text-lg font-medium leading-relaxed">
+                  {project.takeawaysIntro}
+                </p>
+                <div className="mt-10 grid gap-10 md:grid-cols-3">
+                  {project.takeaways.map((item) => (
+                    <div key={item.heading}>
+                      <h3 className="text-lg font-bold">{item.heading}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted">{item.body}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
       </section>

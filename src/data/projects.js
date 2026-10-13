@@ -55,6 +55,22 @@ export const projects = [
       },
     ],
     showDiagram: true,
+    takeawaysIntro:
+      'This project reinforced that meaningful design improvements often start by looking beyond the interface to understand the behaviors and challenges behind it.',
+    takeaways: [
+      {
+        heading: 'Solve the underlying problem, not just the UI',
+        body: "Customers weren't avoiding new templates because they didn't want to use them. They were duplicating existing emails to preserve their branding. Understanding that behavior led to a solution that addressed the root problem rather than just improving the existing Brand Library.",
+      },
+      {
+        heading: 'Collaboration is essential to solving complex problems',
+        body: 'Working closely with product, engineering, and data science was especially important when introducing website scraping during onboarding. Aligning on what users expected and what the technology could deliver helped us shape a more intuitive experience.',
+      },
+      {
+        heading: 'Design for today, but think about tomorrow',
+        body: 'By creating a more connected system for managing and applying brand assets, we solved immediate workflow challenges while establishing a foundation that could support future AI-powered experiences.',
+      },
+    ],
   },
   {
     slug: 'email-ai',
