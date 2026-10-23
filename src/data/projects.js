@@ -2,6 +2,7 @@ import brandLibraryHome from '../assets/Brandlibaryhome.webp'
 import blCase1Video from '../assets/BLCase1.mp4'
 import emailAIHome from '../assets/EmailAIhome.webp'
 import emailAICase1Video from '../assets/EmailAICase1.mp4'
+import artifactHome from '../assets/ArtifactHome.webp'
 
 export const projects = [
   {
@@ -109,6 +110,7 @@ export const projects = [
     role: 'Solo Designer & Builder',
     client: 'SheBuilds Hackathon',
     color: 'sky',
+    image: artifactHome,
     problem:
       "Designers struggle to keep their portfolios current. Case studies are time-consuming and often written long after a project wraps, and the context behind the work gets lost across Figma, Docs, Slack, and email — especially during layoffs or job searches, when designers scramble to reconstruct their own stories.",
     approach:
