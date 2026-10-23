@@ -9,6 +9,7 @@ import { site } from '../data/site'
 const colorMap = {
   lilac: 'bg-lilac-soft',
   peach: 'bg-peach/40',
+  sky: 'bg-sky/40',
 }
 
 export default function Work() {
@@ -30,7 +31,7 @@ export default function Work() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <Link
               key={project.slug}

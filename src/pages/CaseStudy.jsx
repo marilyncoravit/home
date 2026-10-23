@@ -10,6 +10,7 @@ import { site } from '../data/site'
 const colorMap = {
   lilac: 'bg-lilac',
   peach: 'bg-peach/40',
+  sky: 'bg-sky/40',
 }
 
 const statsColsMap = {
@@ -68,21 +69,19 @@ export default function CaseStudy() {
               alt={`${project.title} screenshot`}
               className="mt-10 w-full rounded-2xl"
             />
-          ) : (
+          ) : project.screenshots?.length === 2 ? (
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
-              {[0, 1].map((i) =>
-                project.screenshots?.[i] ? (
-                  <img
-                    key={i}
-                    src={project.screenshots[i]}
-                    alt={`${project.title}, screenshot ${i + 1}`}
-                    className="aspect-[4/3] w-full rounded-2xl object-cover"
-                  />
-                ) : (
-                  <PlaceholderImage key={i} label={`${project.title}, screenshot ${i + 1}`} />
-                ),
-              )}
+              {[0, 1].map((i) => (
+                <img
+                  key={i}
+                  src={project.screenshots[i]}
+                  alt={`${project.title}, screenshot ${i + 1}`}
+                  className="aspect-[4/3] w-full rounded-2xl object-cover"
+                />
+              ))}
             </div>
+          ) : (
+            <PlaceholderImage label={`${project.title} screenshot`} className="mt-10" />
           )}
         </div>
       </section>

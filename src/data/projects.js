@@ -98,6 +98,28 @@ export const projects = [
       { value: '85%', label: 'of users reported easier content creation' },
     ],
   },
+  {
+    slug: 'artifact',
+    badge: 'ARTIFACT',
+    title: 'An AI-powered time capsule for designers',
+    subtitle:
+      "A 48-hour SheBuilds hackathon project that helps designers capture, remix, and tell the story of their work while it's still fresh.",
+    caseSubtitle:
+      "Built in 48 hours for the SheBuilds hackathon on Lovable, Artifact is an AI-powered time capsule that helps designers capture artifacts, add context, and let AI generate the story behind their work before it gets lost.",
+    role: 'Solo Designer & Builder',
+    client: 'SheBuilds Hackathon',
+    color: 'sky',
+    problem:
+      "Designers struggle to keep their portfolios current. Case studies are time-consuming and often written long after a project wraps, and the context behind the work gets lost across Figma, Docs, Slack, and email — especially during layoffs or job searches, when designers scramble to reconstruct their own stories.",
+    approach:
+      "I designed and built Artifact, an AI-powered time capsule with three modes — Capture, Remix, and Timeline — that let designers save artifacts, add context, and have AI generate the story. Built in 48 hours with Lovable, ChatGPT, and Gemini, the MVP included a structured \"Capsule Editor\" for uploads and prompts, an AI text generator for multiple storytelling formats, and dashboard and timeline prototypes with a conversational, reusable tone.",
+    impact:
+      "Beyond shipping a working MVP in a weekend, the project reinforced that simplicity invites reflection. It's shaped my thinking on a more conversational next version — one where designers can just drop in files from Figma, Docs, and spreadsheets and let AI make sense of it all.",
+    stats: [
+      { value: '48 hrs', label: 'from idea to shipped MVP' },
+      { value: '3', label: 'AI-powered experience modes' },
+    ],
+  },
 ]
 
 export const getProject = (slug) => projects.find((p) => p.slug === slug)
