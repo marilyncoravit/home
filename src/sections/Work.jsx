@@ -68,7 +68,7 @@ export default function Work() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-3xl hand-border bg-sky/60 p-6 sm:p-8">
+        <div className="mt-8 rounded-3xl hand-border bg-mint/60 p-6 sm:p-8">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-muted">
             <Icon name="lock" className="h-4 w-4" />
             Additional work
