@@ -48,8 +48,7 @@ export const projects = [
         heading: 'Expanding the vision for Brand Library',
         paragraphs: [
           'I recommended redesigning the existing Brand Library and introducing a dedicated Defaults section where customers could establish their primary logos, colors, and fonts.',
-          'This expanded the solution beyond asset management to support a more connected experience, allowing brand preferences to carry through to new templates and reducing repetitive setup.',
-          'Working with Product Management and Engineering, I helped align the team around this direction and translate it into a scalable experience.',
+          'This expanded the solution beyond asset management to support a more connected experience, allowing brand preferences to carry through to new templates and reducing repetitive setup. Working with Product Management and Engineering, I helped align the team around this direction and translate it into a scalable experience.',
         ],
       },
       {
