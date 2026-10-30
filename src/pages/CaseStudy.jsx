@@ -138,11 +138,14 @@ export default function CaseStudy() {
             ))}
             {project.showDiagram && <BrandLibraryDiagram />}
 
-            {project.takeawaysIntro && (
+            {project.takeawaysHeading && (
               <div className="mt-14">
-                <p className="max-w-3xl text-lg font-medium leading-relaxed">
-                  {project.takeawaysIntro}
-                </p>
+                <h2 className="text-2xl font-bold sm:text-3xl">{project.takeawaysHeading}</h2>
+                {project.takeawaysIntro && (
+                  <p className="mt-4 max-w-3xl text-lg font-medium leading-relaxed">
+                    {project.takeawaysIntro}
+                  </p>
+                )}
                 <div className="mt-10 grid gap-10 md:grid-cols-3">
                   {project.takeaways.map((item) => (
                     <div key={item.heading}>

@@ -60,20 +60,19 @@ export const projects = [
       },
     ],
     showDiagram: true,
-    takeawaysIntro:
-      'This project reinforced that meaningful design improvements often start by looking beyond the interface to understand the behaviors and challenges behind it.',
+    takeawaysHeading: 'Reflections and learnings',
     takeaways: [
       {
-        heading: 'Solve the underlying problem, not just the UI',
-        body: "Customers weren't avoiding new templates because they didn't want to use them. They were duplicating existing emails to preserve their branding. Understanding that behavior led to a solution that addressed the root problem rather than just improving the existing Brand Library.",
+        heading: 'Challenge the problem before designing the solution',
+        body: 'The most important insight came from understanding why customers duplicated existing emails. Recognizing the workaround helped redirect the work toward a more meaningful solution.',
       },
       {
-        heading: 'Collaboration is essential to solving complex problems',
-        body: 'Working closely with product, engineering, and data science was especially important when introducing website scraping during onboarding. Aligning on what users expected and what the technology could deliver helped us shape a more intuitive experience.',
+        heading: 'Create alignment around the customer experience',
+        body: 'The redesign required decisions across onboarding, asset management, and editing workflows. Keeping the customer journey at the center helped connect work across Product, Engineering, Data Science, and Design Systems.',
       },
       {
-        heading: 'Design for today, but think about tomorrow',
-        body: 'By creating a more connected system for managing and applying brand assets, we solved immediate workflow challenges while establishing a foundation that could support future AI-powered experiences.',
+        heading: 'Build foundations that extend beyond the initial release',
+        body: 'Separating brand assets from reusable defaults addressed immediate customer needs while creating a system that could support future brand-aware and AI-powered experiences.',
       },
     ],
     beyondHeading: 'Beyond the redesign',
