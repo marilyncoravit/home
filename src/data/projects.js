@@ -24,7 +24,7 @@ export const projects = [
     problem:
       'Customers were duplicating existing emails to preserve their branding rather than starting with new templates. What initially appeared to be a content creation preference revealed a larger opportunity to rethink how brand identity was managed across Klaviyo.',
     approach:
-      'I led the redesign of Brand Library, proposing a system of reusable brand defaults that connected onboarding, asset management, and content creation. The experience reduced repetitive work, improved access to brand assets, and established a scalable foundation for future AI-powered capabilities.',
+      'Identified opportunities to improve brand consistency across the customer journey and influenced product priorities to expand Brand Library beyond asset storage. Led the redesign, introducing reusable brand defaults and helping shape an automated onboarding experience in collaboration with Product Management, Data Science, and Engineering.',
     impact:
       'Increased Brand Library page visits 4× and reduced asset retrieval time by 40%, helping customers create more consistent, on-brand experiences.',
     stats: [
