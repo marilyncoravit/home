@@ -11,17 +11,16 @@ export const projects = [
     title: 'Making brand consistency effortless',
     subtitle:
       "Redesigned how customers manage and reuse brand assets across Klaviyo, simplifying workflows and creating a scalable foundation for future experiences.",
-    caseSubtitle:
-      "Led the redesign of Klaviyo's Brand Library, making it easier for customers to manage and reuse brand assets across their marketing experiences. From simplifying onboarding to bringing brand assets directly into the editor, the work improved everyday workflows and created a foundation for future AI-powered capabilities.",
+    caseSubtitle: 'Turning a fragmented workflow into a connected brand experience',
     role: 'Lead Product Designer',
     client: 'Klaviyo',
     color: 'lilac',
     image: brandLibraryHome,
     caseVideo: blCase1Video,
     problem:
-      'Customers repeatedly added the same logos, colors, and fonts when creating emails and forms, leading to wasted time and inconsistent branding.',
+      'Customers were duplicating existing emails to preserve their branding rather than starting with new templates. What initially appeared to be a content creation preference revealed a larger opportunity to rethink how brand identity was managed across Klaviyo.',
     approach:
-      'Led the end-to-end redesign of Brand Library, partnering with research, product, engineering, and design systems to simplify asset setup and make brand elements accessible directly within the editor.',
+      'I led the redesign of Brand Library, proposing a system of reusable brand defaults that connected onboarding, asset management, and content creation. The experience reduced repetitive work, improved access to brand assets, and established a scalable foundation for future AI-powered capabilities.',
     impact:
       'Increased Brand Library page visits 4× and reduced asset retrieval time by 40%, helping customers create more consistent, on-brand experiences.',
     stats: [
