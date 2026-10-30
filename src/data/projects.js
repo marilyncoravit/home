@@ -12,6 +12,10 @@ export const projects = [
     subtitle:
       "Redesigned how customers manage and reuse brand assets across Klaviyo, simplifying workflows and creating a scalable foundation for future experiences.",
     caseSubtitle: 'Turning a fragmented workflow into a connected brand experience',
+    openingParagraphs: [
+      'Customers were duplicating existing emails to preserve their branding rather than starting with new templates. What initially appeared to be a content creation preference revealed a larger opportunity to rethink how brand identity was managed across Klaviyo.',
+      'I led the redesign of Brand Library, proposing a system of reusable brand defaults that connected onboarding, asset management, and content creation. The experience reduced repetitive work, improved access to brand assets, and established a scalable foundation for future AI-powered capabilities.',
+    ],
     role: 'Lead Product Designer',
     client: 'Klaviyo',
     color: 'lilac',

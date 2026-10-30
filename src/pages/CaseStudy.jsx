@@ -51,6 +51,14 @@ export default function CaseStudy() {
                 <span className="font-semibold">Client/Company:</span> {project.client}
               </p>
             </div>
+
+            {project.openingParagraphs && (
+              <div className="mt-6 max-w-3xl space-y-4 text-sm leading-relaxed text-muted sm:text-base">
+                {project.openingParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            )}
           </div>
 
           {project.caseVideo ? (
