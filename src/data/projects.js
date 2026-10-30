@@ -36,26 +36,34 @@ export const projects = [
       { value: '40%', label: 'Faster asset retrieval' },
       { value: '4x', label: 'More page visits' },
     ],
-    futureHeading: 'From customer insight to product direction',
+    futureHeading: 'Shaping the product direction',
     futureSections: [
       {
-        heading: 'Looking beyond the immediate problem',
+        heading: 'Looking beyond the existing experience',
         paragraphs: [
-          "Customers were duplicating existing emails to preserve their branding rather than creating new ones from templates. This behavior revealed an underlying problem: brand identity wasn't easily reusable across the content creation experience.",
+          'Customers were duplicating existing emails rather than starting with new templates to preserve their branding. This revealed a larger opportunity to improve how brand identity was managed and reused across Klaviyo.',
         ],
       },
       {
-        heading: 'Shaping the solution',
+        heading: 'Expanding the vision for Brand Library',
         paragraphs: [
-          'I proposed introducing primary brand defaults, allowing customers to establish preferred logos, colors, and fonts once and apply them automatically to new templates.',
-          'This shifted the direction of the work from improving asset storage to creating a more connected brand experience. I worked with Product Management and Engineering to align on the approach and incorporate it into the redesign.',
+          'I recommended redesigning the existing Brand Library and introducing a dedicated Defaults section where customers could establish their primary logos, colors, and fonts.',
+          'This expanded the solution beyond asset management to support a more connected experience, allowing brand preferences to carry through to new templates and reducing repetitive setup.',
+          'Working with Product Management and Engineering, I helped align the team around this direction and translate it into a scalable experience.',
         ],
       },
       {
-        heading: 'Creating a scalable foundation',
+        heading: 'Influencing the onboarding roadmap',
         paragraphs: [
-          'We established a clear distinction between stored brand assets and primary defaults, while making both accessible within the editor.',
-          'The result was a connected system that supported customers throughout brand setup and content creation, while establishing patterns that could extend to future experiences.',
+          "We also advocated for prioritizing an onboarding experience that would automatically capture brand assets from new signups' websites.",
+          'Rather than requiring customers to build their Brand Library manually, this approach would give them a starting point that they could review and customize.',
+          'I partnered with Product Management, Data Science, and Engineering to shape how detected assets were presented and incorporated into the onboarding experience, balancing technical capabilities with customer expectations.',
+        ],
+      },
+      {
+        heading: 'The outcome',
+        paragraphs: [
+          'These decisions helped evolve Brand Library from a standalone asset repository into a connected system spanning onboarding, brand management, and content creation, while establishing a foundation for future AI-powered experiences.',
         ],
       },
     ],
