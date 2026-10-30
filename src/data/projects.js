@@ -36,25 +36,26 @@ export const projects = [
       { value: '40%', label: 'Faster asset retrieval' },
       { value: '4x', label: 'More page visits' },
     ],
-    futureHeading: 'Rethinking how brand assets work',
+    futureHeading: 'From customer insight to product direction',
     futureSections: [
       {
-        heading: 'The insight',
+        heading: 'Looking beyond the immediate problem',
         paragraphs: [
-          'Customers were duplicating existing emails rather than starting with new templates to avoid rebuilding their branding each time. What appeared to be a content creation preference was actually a workaround for maintaining brand consistency.',
+          "Customers were duplicating existing emails to preserve their branding rather than creating new ones from templates. This behavior revealed an underlying problem: brand identity wasn't easily reusable across the content creation experience.",
         ],
       },
       {
-        heading: 'The design decision',
+        heading: 'Shaping the solution',
         paragraphs: [
-          'I proposed introducing primary brand defaults, allowing customers to select their preferred logos, colors, and fonts and have them automatically applied to new templates.',
-          'Working closely with product and engineering, I helped align the team around this approach and incorporate it into a redesigned Brand Library architecture that separated stored assets from primary defaults while keeping both accessible within the editor.',
+          'I proposed introducing primary brand defaults, allowing customers to establish preferred logos, colors, and fonts once and apply them automatically to new templates.',
+          'This shifted the direction of the work from improving asset storage to creating a more connected brand experience. I worked with Product Management and Engineering to align on the approach and incorporate it into the redesign.',
         ],
       },
       {
-        heading: 'Why it mattered',
+        heading: 'Creating a scalable foundation',
         paragraphs: [
-          'This transformed Brand Library from a place to store assets into a connected system that could apply brand identity throughout the creation experience, reducing repetitive setup and laying the foundation for future brand-aware capabilities.',
+          'We established a clear distinction between stored brand assets and primary defaults, while making both accessible within the editor.',
+          'The result was a connected system that supported customers throughout brand setup and content creation, while establishing patterns that could extend to future experiences.',
         ],
       },
     ],
