@@ -1,8 +1,12 @@
+import { useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import BrandLibraryDiagram from '../components/case-study/BrandLibraryDiagram'
+import EmailAIDiagram from '../components/case-study/EmailAIDiagram'
+import ImageEditingDiagram from '../components/case-study/ImageEditingDiagram'
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
 import Icon from '../components/ui/Icon'
+import Lightbox from '../components/ui/Lightbox'
 import PlaceholderImage from '../components/ui/PlaceholderImage'
 import { getProject, projects } from '../data/projects'
 import { site } from '../data/site'
@@ -10,6 +14,9 @@ import { site } from '../data/site'
 const colorMap = {
   lilac: 'bg-lilac',
   peach: 'bg-peach/40',
+  sky: 'bg-sky/40',
+  mint: 'bg-mint/40',
+  blush: 'bg-blush/40',
 }
 
 const statsColsMap = {
@@ -18,13 +25,32 @@ const statsColsMap = {
   3: 'sm:grid-cols-3',
 }
 
+const takeawaysColsMap = {
+  1: 'md:grid-cols-1',
+  2: 'md:grid-cols-2',
+  3: 'md:grid-cols-3',
+}
+
+const diagramMap = {
+  'brand-library': BrandLibraryDiagram,
+  'email-ai': EmailAIDiagram,
+  'image-editing': ImageEditingDiagram,
+}
+
 export default function CaseStudy() {
   const { slug } = useParams()
   const project = getProject(slug)
 
   if (!project) return <Navigate to="/" replace />
 
-  const otherProject = projects.find((p) => p.slug !== project.slug)
+  const visibleProjects = projects.filter((p) => p.slug !== 'artifact')
+  const visibleIndex = visibleProjects.findIndex((p) => p.slug === project.slug)
+  const otherProject =
+    visibleIndex === -1
+      ? visibleProjects[0]
+      : visibleProjects[(visibleIndex + 1) % visibleProjects.length]
+  const Diagram = diagramMap[project.slug]
+  const [lightboxImage, setLightboxImage] = useState(null)
 
   return (
     <article>
@@ -50,6 +76,14 @@ export default function CaseStudy() {
                 <span className="font-semibold">Client/Company:</span> {project.client}
               </p>
             </div>
+
+            {project.openingParagraphs && (
+              <div className="mt-6 space-y-4 text-sm leading-relaxed text-muted sm:text-base">
+                {project.openingParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            )}
           </div>
 
           {project.caseVideo ? (
@@ -68,21 +102,19 @@ export default function CaseStudy() {
               alt={`${project.title} screenshot`}
               className="mt-10 w-full rounded-2xl"
             />
-          ) : (
+          ) : project.screenshots?.length === 2 ? (
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
-              {[0, 1].map((i) =>
-                project.screenshots?.[i] ? (
-                  <img
-                    key={i}
-                    src={project.screenshots[i]}
-                    alt={`${project.title}, screenshot ${i + 1}`}
-                    className="aspect-[4/3] w-full rounded-2xl object-cover"
-                  />
-                ) : (
-                  <PlaceholderImage key={i} label={`${project.title}, screenshot ${i + 1}`} />
-                ),
-              )}
+              {[0, 1].map((i) => (
+                <img
+                  key={i}
+                  src={project.screenshots[i]}
+                  alt={`${project.title}, screenshot ${i + 1}`}
+                  className="aspect-[4/3] w-full rounded-2xl object-cover"
+                />
+              ))}
             </div>
+          ) : (
+            <PlaceholderImage label={`${project.title} screenshot`} className="mt-10" />
           )}
         </div>
       </section>
@@ -127,18 +159,130 @@ export default function CaseStudy() {
                     {paragraph}
                   </p>
                 ))}
+                {fsection.image && (
+                  <figure className="mx-auto mt-4 max-w-xl">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setLightboxImage({
+                          src: fsection.image,
+                          alt: fsection.imageAlt ?? fsection.heading,
+                        })
+                      }
+                      className="block w-full cursor-zoom-in transition-opacity hover:opacity-90"
+                    >
+                      <img
+                        src={fsection.image}
+                        alt={fsection.imageAlt ?? fsection.heading}
+                        className="w-full rounded-2xl hand-border"
+                      />
+                    </button>
+                    {fsection.imageCaption && (
+                      <figcaption className="mt-2 text-center text-xs text-muted">
+                        {fsection.imageCaption}
+                      </figcaption>
+                    )}
+                  </figure>
+                )}
+                {fsection.comparisonImages && (
+                  <figure className="mx-auto mt-4 max-w-4xl">
+                    <div className="flex flex-col items-stretch gap-4 sm:flex-row">
+                      <div className="flex-1 rounded-3xl hand-border bg-paper p-4">
+                        <p className="text-center text-xs font-semibold uppercase tracking-wide text-muted">
+                          {fsection.comparisonImages[0].label}
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() => setLightboxImage(fsection.comparisonImages[0])}
+                          className="mt-3 block w-full cursor-zoom-in transition-opacity hover:opacity-90"
+                        >
+                          <img
+                            src={fsection.comparisonImages[0].src}
+                            alt={fsection.comparisonImages[0].alt}
+                            className="w-full rounded-2xl"
+                          />
+                        </button>
+                      </div>
+                      <Icon
+                        name="arrowRight"
+                        className="h-6 w-6 shrink-0 self-center rotate-90 text-muted sm:rotate-0"
+                      />
+                      <div className="flex-1 rounded-3xl hand-border bg-paper p-4">
+                        <p className="text-center text-xs font-semibold uppercase tracking-wide text-muted">
+                          {fsection.comparisonImages[1].label}
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() => setLightboxImage(fsection.comparisonImages[1])}
+                          className="mt-3 block w-full cursor-zoom-in transition-opacity hover:opacity-90"
+                        >
+                          <img
+                            src={fsection.comparisonImages[1].src}
+                            alt={fsection.comparisonImages[1].alt}
+                            className="w-full rounded-2xl"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                    {fsection.imageCaption && (
+                      <figcaption className="mt-3 text-center text-xs text-muted">
+                        {fsection.imageCaption}
+                      </figcaption>
+                    )}
+                  </figure>
+                )}
+                {fsection.morePara && (
+                  <p className="mt-4 text-sm leading-relaxed text-muted">{fsection.morePara}</p>
+                )}
               </div>
             ))}
-            {project.showDiagram && <BrandLibraryDiagram />}
+            {project.showDiagram && Diagram && <Diagram />}
 
-            {project.takeawaysIntro && (
+            {project.outcomesHeading && (
+              <div className={`mt-14 rounded-3xl hand-border p-10 ${colorMap[project.color]}`}>
+                <h2 className="text-2xl font-bold sm:text-3xl">{project.outcomesHeading}</h2>
+                <div className="mt-4 max-w-3xl space-y-4 text-sm leading-relaxed text-muted">
+                  {(Array.isArray(project.outcomesCopy)
+                    ? project.outcomesCopy
+                    : [project.outcomesCopy]
+                  ).map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {project.takeawaysHeading && (
               <div className="mt-14">
-                <p className="max-w-3xl text-lg font-medium leading-relaxed">
-                  {project.takeawaysIntro}
-                </p>
-                <div className="mt-10 grid gap-10 md:grid-cols-3">
+                <h2 className="text-2xl font-bold sm:text-3xl">{project.takeawaysHeading}</h2>
+                {project.takeawaysIntro && (
+                  <p className="mt-4 max-w-3xl text-lg font-medium leading-relaxed">
+                    {project.takeawaysIntro}
+                  </p>
+                )}
+                <div
+                  className={`mt-10 grid gap-10 ${takeawaysColsMap[project.takeaways.length] ?? 'md:grid-cols-3'}`}
+                >
                   {project.takeaways.map((item) => (
                     <div key={item.heading}>
+                      {item.image && (
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setLightboxImage({
+                              src: item.image,
+                              alt: item.imageAlt ?? item.heading,
+                            })
+                          }
+                          className="block w-full cursor-zoom-in transition-opacity hover:opacity-90"
+                        >
+                          <img
+                            src={item.image}
+                            alt={item.imageAlt ?? item.heading}
+                            className="mb-4 w-full rounded-2xl hand-border"
+                          />
+                        </button>
+                      )}
                       <h3 className="text-lg font-bold">{item.heading}</h3>
                       <p className="mt-2 text-sm leading-relaxed text-muted">{item.body}</p>
                     </div>
@@ -150,9 +294,13 @@ export default function CaseStudy() {
             {project.beyondHeading && (
               <div className="mt-14 rounded-3xl hand-border bg-lilac-soft p-10">
                 <h3 className="text-2xl font-bold sm:text-3xl">{project.beyondHeading}</h3>
-                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">
-                  {project.beyondCopy}
-                </p>
+                <div className="mt-4 max-w-3xl space-y-4 text-sm leading-relaxed text-muted">
+                  {(Array.isArray(project.beyondCopy) ? project.beyondCopy : [project.beyondCopy]).map(
+                    (paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ),
+                  )}
+                </div>
               </div>
             )}
           </div>
@@ -174,6 +322,8 @@ export default function CaseStudy() {
           </Button>
         </div>
       </section>
+
+      <Lightbox image={lightboxImage} onClose={() => setLightboxImage(null)} />
     </article>
   )
 }

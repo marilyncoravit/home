@@ -48,28 +48,26 @@ export default function BrandLibraryDiagram() {
 
         <div className="mt-10 text-left">
           <h3 className="text-2xl font-bold sm:text-3xl">Making brand setup effortless</h3>
-          <h4 className="mt-4 text-lg font-bold">The opportunity</h4>
+          <h4 className="mt-4 text-lg font-bold">Reducing the effort of getting started</h4>
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            Setting up a brand from scratch required customers to manually add their logos,
-            colors, and fonts. We introduced a website scraping feature during onboarding to
-            help new users quickly populate their Brand Library and establish their defaults.
+            Setting up a brand required customers to manually add logos, colors, and fonts. We
+            introduced website scraping during onboarding to give new customers a starting
+            point using assets identified from their existing websites.
           </p>
         </div>
 
         <div className="mt-10 grid items-start gap-8 lg:grid-cols-2">
           <div className="text-left">
-            <h4 className="text-lg font-bold">The challenge</h4>
+            <h4 className="text-lg font-bold">Designing around imperfect technology</h4>
             <p className="mt-2 text-sm leading-relaxed text-muted">
-              Extracting brand information was only part of the problem. Making sure the
-              scraper returned results that matched users&rsquo; expectations required close
-              collaboration with product management, data science, and engineering.
+              Extracting brand information didn&rsquo;t guarantee that the results would match
+              customer expectations. Working with Product Management, Data Science, and
+              Engineering, I helped refine how detected assets were presented and incorporated
+              into the onboarding experience.
             </p>
-            <h4 className="mt-6 text-lg font-bold">My contribution</h4>
-            <p className="mt-2 text-sm leading-relaxed text-muted">
-              I worked closely with these teams to refine how extracted brand assets were
-              presented and incorporated into the onboarding experience, with a focus on
-              making the process intuitive and giving customers a clear starting point for
-              their brand.
+            <p className="mt-4 text-sm leading-relaxed text-muted">
+              The design needed to make the process feel effortless while preserving
+              customers&rsquo; ability to review and establish their preferred brand defaults.
             </p>
           </div>
           <video
