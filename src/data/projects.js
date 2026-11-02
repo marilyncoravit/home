@@ -8,6 +8,9 @@ import emailAIPatterns from '../assets/EmailAIPatterns.webp'
 import emailAIStartSmall from '../assets/EmailAIStartSmall.webp'
 import emailAIClarity from '../assets/EmailAIClarity.webp'
 import artifactHome from '../assets/ArtifactHome.webp'
+import imageEditingHome from '../assets/ImageEditingHome.webp'
+import imageEditingExploration from '../assets/ImageEditingExploration.webp'
+import imageEditingShapes from '../assets/ImageEditingShapes.webp'
 
 export const projects = [
   {
@@ -182,6 +185,88 @@ export const projects = [
         body: "Giving users visible feedback, like rate limits, prompts to add more detail, and a way to rate drafts as helpful or not, mattered more than polishing the generation itself. Clear, honest signals about what the AI could and couldn't do built more trust than a flashier interface would have.",
         image: emailAIClarity,
         imageAlt: 'A generated section draft shown with "Was this helpful?" feedback controls and an Insert draft action',
+      },
+    ],
+  },
+  {
+    slug: 'image-editing',
+    badge: 'IMAGE EDITING',
+    title: 'Making image editing feel effortless',
+    subtitle: "Simplifying everyday creative workflows within Klaviyo's email editor.",
+    caseSubtitle: "Simplifying everyday creative workflows within Klaviyo's email editor",
+    openingParagraphs: [
+      "Customers were running into friction with everyday image-editing tasks, cropping and resizing images directly within Klaviyo's email editor. These pain points showed up in support tickets and made routine content creation harder than it needed to be.",
+      "I was the primary designer on the redesign, from early exploration through implementation, simplifying how customers cropped and resized images while supporting common aspect ratios and precise adjustments. After shipping the core experience, I handed the project to another designer and continued mentoring them through the enhancements that followed.",
+    ],
+    role: 'Lead Product Designer',
+    client: 'Klaviyo',
+    color: 'mint',
+    image: imageEditingHome,
+    screenshots: [imageEditingHome],
+    problem:
+      'Customers were experiencing friction with common image-editing tasks, particularly cropping and resizing images within the email editor. These issues contributed to support tickets and made everyday content creation more difficult than it needed to be.',
+    approach:
+      'I led the design exploration, evaluating interaction patterns and refining the cropping and resizing experience. The work focused on making cropping controls easier to understand, supporting common aspect ratios alongside precise dimension adjustments, helping customers preview how their images would appear in their emails, and reducing friction within the existing editing workflow.',
+    impact:
+      'Within weeks of launch, 24% of weekly email template editors were using the crop button and 22% were cropping images, both close to goal. Support tickets related to images dropped 5%, meeting the goal of no increase despite the added complexity of new controls.',
+    stats: [
+      { value: '24%', label: 'of weekly editors used the crop button' },
+      { value: '22%', label: 'of weekly editors cropped images' },
+      { value: '5%', label: 'fewer image-related support tickets' },
+    ],
+    futureHeading: 'Designing a more intuitive crop experience',
+    futureSections: [
+      {
+        heading: 'Rethinking the image-editing experience',
+        paragraphs: [
+          "Klaviyo relied on a third-party tool to support image editing, and cropping and resizing were consistently the pain points customers ran into. The opportunity was to bring a simpler, more intuitive editing experience directly into Klaviyo's own editor.",
+        ],
+        image: imageEditingExploration,
+        imageAlt: 'Existing versus proposed image block concepts explored during the redesign',
+        imageCaption: 'Comparing the existing image block with early proposed concepts.',
+      },
+      {
+        heading: 'Designing a more intuitive workflow',
+        paragraphs: [
+          'I focused the redesign on a few key moments: making the crop entry point obvious from the image panel, supporting common aspect ratios alongside precise width and height inputs, and giving customers a live preview of how their crop would look in the email before committing to it.',
+        ],
+      },
+      {
+        heading: 'Iterating and refining',
+        paragraphs: [
+          'The crop tool went through several rounds of refinement, from an early custom-dimensions-only version to one that paired common ratios, like 1:1, 16:9, and 4:3, with the flexibility of custom width and height, so customers could move quickly without losing control over the result.',
+        ],
+      },
+      {
+        heading: 'Extending the experience through mentorship',
+        paragraphs: [
+          'After shipping the core redesign, I handed the project to another designer and stayed on as a mentor through the enhancements that followed, helping them frame the problem, explore alternative approaches, evaluate tradeoffs, and extend the pattern without introducing unnecessary complexity.',
+          'That collaboration led to a fast follow-up: the ability to crop into specific shapes, like squares and circles, using the same interaction patterns customers had already learned.',
+        ],
+        image: imageEditingShapes,
+        imageAlt: 'Expanded crop shape options including common ratios and a circle crop',
+        imageCaption: 'A later enhancement extended cropping to include shapes like circles.',
+      },
+    ],
+    showDiagram: true,
+    outcomesHeading: 'Reducing friction in a frequently used workflow',
+    outcomesCopy: [
+      'The redesigned crop experience saw strong early adoption, with 24% of weekly email template editors using the new crop button and 22% cropping images, both landing close to goal within weeks of launch.',
+      'Support tickets related to images dropped 5%, meeting the goal of no increase even as the tool gained more capability. For a workflow customers rely on every time they build an email, that reduction in friction adds up: less time troubleshooting, more time creating.',
+    ],
+    takeawaysHeading: 'Reflections & Learnings',
+    takeaways: [
+      {
+        heading: 'Everyday interactions deserve the same rigor as big features',
+        body: "Cropping and resizing aren't flashy, but customers touch them constantly. Getting the small, frequent interactions right often matters more to day-to-day satisfaction than a bigger, less-used feature would.",
+      },
+      {
+        heading: 'Balance simplicity with flexibility',
+        body: 'Common aspect ratios made the fast path obvious, but keeping custom dimensions available meant customers with specific needs were never boxed in. Neither option alone would have worked as well.',
+      },
+      {
+        heading: 'Design for the next designer, too',
+        body: 'Handing off a feature works best when the patterns are clear enough for someone else to extend with confidence. Staying involved as a mentor, rather than stepping away entirely, helped keep later enhancements consistent with the original intent.',
       },
     ],
   },

@@ -1,6 +1,7 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import BrandLibraryDiagram from '../components/case-study/BrandLibraryDiagram'
 import EmailAIDiagram from '../components/case-study/EmailAIDiagram'
+import ImageEditingDiagram from '../components/case-study/ImageEditingDiagram'
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
 import Icon from '../components/ui/Icon'
@@ -12,6 +13,7 @@ const colorMap = {
   lilac: 'bg-lilac',
   peach: 'bg-peach/40',
   sky: 'bg-sky/40',
+  mint: 'bg-mint/40',
 }
 
 const statsColsMap = {
@@ -29,6 +31,7 @@ const takeawaysColsMap = {
 const diagramMap = {
   'brand-library': BrandLibraryDiagram,
   'email-ai': EmailAIDiagram,
+  'image-editing': ImageEditingDiagram,
 }
 
 export default function CaseStudy() {
@@ -37,7 +40,8 @@ export default function CaseStudy() {
 
   if (!project) return <Navigate to="/" replace />
 
-  const otherProject = projects.find((p) => p.slug !== project.slug)
+  const projectIndex = projects.findIndex((p) => p.slug === project.slug)
+  const otherProject = projects[(projectIndex + 1) % projects.length]
   const Diagram = diagramMap[project.slug]
 
   return (
@@ -167,6 +171,20 @@ export default function CaseStudy() {
               </div>
             ))}
             {project.showDiagram && Diagram && <Diagram />}
+
+            {project.outcomesHeading && (
+              <div className="mt-14 rounded-3xl hand-border bg-mint/40 p-10">
+                <h2 className="text-2xl font-bold sm:text-3xl">{project.outcomesHeading}</h2>
+                <div className="mt-4 max-w-3xl space-y-4 text-sm leading-relaxed text-muted">
+                  {(Array.isArray(project.outcomesCopy)
+                    ? project.outcomesCopy
+                    : [project.outcomesCopy]
+                  ).map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {project.takeawaysHeading && (
               <div className="mt-14">
