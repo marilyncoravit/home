@@ -12,7 +12,46 @@ const colorMap = {
   sky: 'bg-sky/40',
 }
 
+function ProjectCard({ project }) {
+  return (
+    <Link
+      to={`/work/${project.slug}`}
+      className={`group flex flex-col rounded-3xl hand-border p-6 transition-transform duration-200 hover:-translate-y-1 ${colorMap[project.color]}`}
+    >
+      <Badge className="w-fit bg-paper">{project.badge}</Badge>
+      {project.image ? (
+        <img
+          src={project.image}
+          alt={`${project.title} screenshot`}
+          className="mt-6 aspect-[16/9] w-full rounded-2xl bg-paper object-contain"
+        />
+      ) : (
+        <PlaceholderImage label={`${project.title} screenshot`} className="mt-6" />
+      )}
+      <div className="mt-6 flex-1">
+        <h3 className="text-2xl font-bold">{project.title}</h3>
+        <p className="mt-2 text-sm text-muted">{project.subtitle}</p>
+      </div>
+      <div className="mt-6 flex items-center justify-between border-t border-ink/10 pt-4">
+        <div className="flex gap-6 text-xs text-muted">
+          {project.stats.slice(0, 2).map((stat) => (
+            <span key={stat.label}>
+              <strong className="text-ink">{stat.value}</strong> {stat.label}
+            </span>
+          ))}
+        </div>
+        <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full hand-border bg-paper transition-transform group-hover:translate-x-1">
+          <Icon name="arrowRight" className="h-4 w-4" />
+        </span>
+      </div>
+    </Link>
+  )
+}
+
 export default function Work() {
+  const selectedProjects = projects.filter((project) => project.slug !== 'artifact')
+  const funProject = projects.find((project) => project.slug === 'artifact')
+
   return (
     <section id="work" className="px-6 pb-24 pt-16">
       <div className="mx-auto max-w-6xl">
@@ -31,40 +70,9 @@ export default function Work() {
           </p>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <Link
-              key={project.slug}
-              to={`/work/${project.slug}`}
-              className={`group flex flex-col rounded-3xl hand-border p-6 transition-transform duration-200 hover:-translate-y-1 ${colorMap[project.color]}`}
-            >
-              <Badge className="w-fit bg-paper">{project.badge}</Badge>
-              {project.image ? (
-                <img
-                  src={project.image}
-                  alt={`${project.title} screenshot`}
-                  className="mt-6 aspect-[16/9] w-full rounded-2xl bg-paper object-contain"
-                />
-              ) : (
-                <PlaceholderImage label={`${project.title} screenshot`} className="mt-6" />
-              )}
-              <div className="mt-6 flex-1">
-                <h3 className="text-2xl font-bold">{project.title}</h3>
-                <p className="mt-2 text-sm text-muted">{project.subtitle}</p>
-              </div>
-              <div className="mt-6 flex items-center justify-between border-t border-ink/10 pt-4">
-                <div className="flex gap-6 text-xs text-muted">
-                  {project.stats.slice(0, 2).map((stat) => (
-                    <span key={stat.label}>
-                      <strong className="text-ink">{stat.value}</strong> {stat.label}
-                    </span>
-                  ))}
-                </div>
-                <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full hand-border bg-paper transition-transform group-hover:translate-x-1">
-                  <Icon name="arrowRight" className="h-4 w-4" />
-                </span>
-              </div>
-            </Link>
+        <div className="grid gap-8 sm:grid-cols-2">
+          {selectedProjects.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
 
@@ -84,6 +92,12 @@ export default function Work() {
             <Icon name="arrowRight" className="h-4 w-4 -rotate-45" />
           </Button>
         </div>
+
+        {funProject && (
+          <div className="mt-8 grid gap-8 sm:grid-cols-2">
+            <ProjectCard project={funProject} />
+          </div>
+        )}
       </div>
     </section>
   )

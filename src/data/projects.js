@@ -187,7 +187,7 @@ export const projects = [
   },
   {
     slug: 'artifact',
-    badge: 'ARTIFACT',
+    badge: 'Fun stuff',
     title: 'An AI-powered time capsule for designers',
     subtitle:
       "A 48-hour SheBuilds hackathon project that helps designers capture, remix, and tell the story of their work while it's still fresh.",
