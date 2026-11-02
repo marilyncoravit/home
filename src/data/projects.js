@@ -83,8 +83,10 @@ export const projects = [
       },
     ],
     beyondHeading: 'Beyond the redesign',
-    beyondCopy:
-      "What began as an effort to simplify brand management evolved into a more connected foundation for creating on-brand content across Klaviyo. Seeing that foundation contribute to the evolution of Klaviyo's AI-powered marketing experiences has reinforced something I value in design: the most meaningful work continues creating value long after launch.",
+    beyondCopy: [
+      "What started as an effort to simplify brand management became a foundation for more connected, on-brand experiences across Klaviyo. By making brand identity reusable throughout the content creation process, the redesign addressed immediate customer frustrations while helping enable future AI-powered capabilities.",
+      "For me, it's a reminder that thoughtful product design isn't just about solving today's problems. It's about creating experiences that continue to deliver value as the product evolves.",
+    ],
   },
   {
     slug: 'email-ai',

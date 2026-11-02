@@ -160,9 +160,13 @@ export default function CaseStudy() {
             {project.beyondHeading && (
               <div className="mt-14 rounded-3xl hand-border bg-lilac-soft p-10">
                 <h3 className="text-2xl font-bold sm:text-3xl">{project.beyondHeading}</h3>
-                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">
-                  {project.beyondCopy}
-                </p>
+                <div className="mt-4 max-w-3xl space-y-4 text-sm leading-relaxed text-muted">
+                  {(Array.isArray(project.beyondCopy) ? project.beyondCopy : [project.beyondCopy]).map(
+                    (paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ),
+                  )}
+                </div>
               </div>
             )}
           </div>
