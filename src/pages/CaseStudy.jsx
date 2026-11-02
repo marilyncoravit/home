@@ -20,6 +20,12 @@ const statsColsMap = {
   3: 'sm:grid-cols-3',
 }
 
+const takeawaysColsMap = {
+  1: 'md:grid-cols-1',
+  2: 'md:grid-cols-2',
+  3: 'md:grid-cols-3',
+}
+
 const diagramMap = {
   'brand-library': BrandLibraryDiagram,
   'email-ai': EmailAIDiagram,
@@ -141,6 +147,23 @@ export default function CaseStudy() {
                     {paragraph}
                   </p>
                 ))}
+                {fsection.image && (
+                  <figure className="mx-auto mt-4 max-w-xl">
+                    <img
+                      src={fsection.image}
+                      alt={fsection.imageAlt ?? fsection.heading}
+                      className="w-full rounded-2xl hand-border"
+                    />
+                    {fsection.imageCaption && (
+                      <figcaption className="mt-2 text-center text-xs text-muted">
+                        {fsection.imageCaption}
+                      </figcaption>
+                    )}
+                  </figure>
+                )}
+                {fsection.morePara && (
+                  <p className="mt-4 text-sm leading-relaxed text-muted">{fsection.morePara}</p>
+                )}
               </div>
             ))}
             {project.showDiagram && Diagram && <Diagram />}
@@ -153,9 +176,18 @@ export default function CaseStudy() {
                     {project.takeawaysIntro}
                   </p>
                 )}
-                <div className="mt-10 grid gap-10 md:grid-cols-3">
+                <div
+                  className={`mt-10 grid gap-10 ${takeawaysColsMap[project.takeaways.length] ?? 'md:grid-cols-3'}`}
+                >
                   {project.takeaways.map((item) => (
                     <div key={item.heading}>
+                      {item.image && (
+                        <img
+                          src={item.image}
+                          alt={item.imageAlt ?? item.heading}
+                          className="mb-4 w-full rounded-2xl hand-border"
+                        />
+                      )}
                       <h3 className="text-lg font-bold">{item.heading}</h3>
                       <p className="mt-2 text-sm leading-relaxed text-muted">{item.body}</p>
                     </div>

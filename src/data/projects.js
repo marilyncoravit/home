@@ -2,6 +2,11 @@ import brandLibraryHome from '../assets/Brandlibaryhome.webp'
 import blCase1Video from '../assets/BLCase1.mp4'
 import emailAIHome from '../assets/EmailAIhome.webp'
 import emailAICase1Video from '../assets/EmailAICase1.mp4'
+import emailAIResearchInsight from '../assets/EmailAIResearchInsight.webp'
+import emailAIIdeation from '../assets/EmailAIIdeation.webp'
+import emailAIPatterns from '../assets/EmailAIPatterns.webp'
+import emailAIStartSmall from '../assets/EmailAIStartSmall.webp'
+import emailAIClarity from '../assets/EmailAIClarity.webp'
 import artifactHome from '../assets/ArtifactHome.webp'
 
 export const projects = [
@@ -121,29 +126,46 @@ export const projects = [
         heading: 'Understanding the opportunity',
         paragraphs: [
           'Primary users were marketers, e-commerce owners, and lifecycle managers juggling multiple channels with little time for content creation. Contextual interviews and usability tests surfaced a consistent pattern: users struggled to start, but valued control once they did, often reusing old campaigns just to avoid a blank canvas.',
-          'That insight shaped where AI could help most: automating repetitive writing and layout tasks while keeping creative decisions, like storytelling and brand tone, in human hands.',
         ],
+        image: emailAIResearchInsight,
+        imageAlt:
+          'Three-panel research sketch: a user facing a blank canvas, copying from previous emails, and finally writing something after it took too long',
+        imageCaption: 'Users struggle to start, but value control.',
+        morePara:
+          "That insight shaped where AI could help most. Mapping tasks by creative value and complexity showed AI was best positioned to assist with drafting and layout, work with high creative value but low-to-moderate complexity, while leaving storytelling and brand tone to the user and reserving full automation for low-value, high-complexity tasks like segmentation logic and scheduling.",
       },
       {
         heading: 'From concept to interface',
         paragraphs: [
           'I brainstormed prompt-based versus structured generation flows and prototyped several entry points, including a sidebar modal, an inline assistant, and quick actions, before landing on a "Design with AI" panel that let users describe a section and generate on-brand drafts directly in the editor.',
-          'Partnering closely with data science and engineering, I helped define what "good" AI output looked like, including visual harmony, diversity across drafts, and concise, on-brand copywriting, and used quick proof-of-concepts to validate generation quality before the full build.',
         ],
+        image: emailAIIdeation,
+        imageAlt: 'Three stacked prompt cards generating on-brand images from a text description',
+        morePara:
+          'Partnering closely with data science and engineering, I helped define what "good" AI output looked like: visual harmony between generated blocks, diversity across the drafts shown, responses that followed the user\'s input, concise and on-brand copywriting, and content that avoided practices with negative implications for Klaviyo\'s senders, like spam-triggering language. I also sketched a small library of hero and article layouts to guide consistent padding, spacing, and structure across generated sections, and used quick proof-of-concepts to validate before the full build.',
       },
       {
         heading: 'Learning from real usage',
         paragraphs: [
           'We launched a focused MVP to observe real behavior, tracking adoption, time-to-draft, and regenerate frequency. Early usage showed adoption, but also discoverability gaps: the AI tool was easy to miss inside the editor flow.',
-          'I explored several ways to surface AI in context, from an educational popover to a deeper IA restructure, before landing on a simpler fix: a more visible sparkle icon in the primary intelligence color and a purple highlight around AI-generated sections, with the tool opening automatically once a block was placed. Early signals showed improved recognition and usage without major structural changes.',
+          "I explored three ways to surface AI in context: an educational popover, which felt intrusive and could fall below the fold; an announcement banner introducing the feature through familiar editor blocks; and a deeper IA restructure to mirror Klaviyo's Forms editor, which was too heavy a lift given the team's early confidence in its ROI.",
+        ],
+      },
+      {
+        heading: 'Making AI impossible to miss',
+        paragraphs: [
+          'I landed on a simpler fix instead: updating the sparkle toolbar icon to the primary intelligence color and adding a purple highlight around AI-generated sections, with the tool opening automatically once a block was placed. Early signals showed improved recognition and usage without major structural changes.',
         ],
       },
       {
         heading: 'Defining the AI experience while designing it',
         paragraphs: [
           'AI within Klaviyo was still emerging: naming, visuals, tone, and usage patterns were all being defined in real time. Cross-functional working sessions with product, data science, and design systems shaped foundational decisions, from what to call AI across the product to how it should look and feel and how to inform users of generation limits and transparency.',
-          'The outcome was a shared AI design language that balanced trust, clarity, and consistency, a foundation other AI features across Klaviyo could build on.',
         ],
+        image: emailAIPatterns,
+        imageAlt: 'A grid of section block cards exploring different placements and treatments for the AI sparkle badge',
+        morePara:
+          "The outcome was a shared AI design language that balanced trust, clarity, and consistency, a foundation other AI features across Klaviyo could build on.",
       },
     ],
     showDiagram: true,
@@ -152,10 +174,14 @@ export const projects = [
       {
         heading: 'Start small, learn fast',
         body: 'Launching a focused MVP let us observe real behavior instead of guessing. Tracking adoption and regenerate frequency surfaced the discoverability gap faster than a longer research phase would have, giving us a clear, low-risk path to iterate before investing in a larger redesign.',
+        image: emailAIStartSmall,
+        imageAlt: 'The AI rewrite panel open on a block of text, offering to regenerate copy based on user feedback',
       },
       {
         heading: 'Clarity before creativity',
         body: "Giving users visible feedback, like rate limits, prompts to add more detail, and a way to rate drafts as helpful or not, mattered more than polishing the generation itself. Clear, honest signals about what the AI could and couldn't do built more trust than a flashier interface would have.",
+        image: emailAIClarity,
+        imageAlt: 'A generated section draft shown with "Was this helpful?" feedback controls and an Insert draft action',
       },
     ],
   },
