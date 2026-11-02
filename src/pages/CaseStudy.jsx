@@ -14,6 +14,7 @@ const colorMap = {
   peach: 'bg-peach/40',
   sky: 'bg-sky/40',
   mint: 'bg-mint/40',
+  blush: 'bg-blush/40',
 }
 
 const statsColsMap = {
@@ -173,7 +174,7 @@ export default function CaseStudy() {
             {project.showDiagram && Diagram && <Diagram />}
 
             {project.outcomesHeading && (
-              <div className="mt-14 rounded-3xl hand-border bg-mint/40 p-10">
+              <div className={`mt-14 rounded-3xl hand-border p-10 ${colorMap[project.color]}`}>
                 <h2 className="text-2xl font-bold sm:text-3xl">{project.outcomesHeading}</h2>
                 <div className="mt-4 max-w-3xl space-y-4 text-sm leading-relaxed text-muted">
                   {(Array.isArray(project.outcomesCopy)

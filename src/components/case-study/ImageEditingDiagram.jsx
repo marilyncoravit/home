@@ -30,7 +30,7 @@ export default function ImageEditingDiagram() {
   return (
     <div className="mt-10 grid gap-6 sm:grid-cols-3">
       {steps.map((step) => (
-        <div key={step.number} className="rounded-3xl hand-border bg-mint/40 p-6">
+        <div key={step.number} className="rounded-3xl hand-border bg-blush/40 p-6">
           <p className="text-xs font-semibold uppercase tracking-wide text-muted">
             Step {step.number}
           </p>

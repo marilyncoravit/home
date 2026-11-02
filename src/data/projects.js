@@ -200,7 +200,7 @@ export const projects = [
     ],
     role: 'Lead Product Designer',
     client: 'Klaviyo',
-    color: 'mint',
+    color: 'blush',
     image: imageEditingHome,
     screenshots: [imageEditingHome],
     problem:

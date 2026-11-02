@@ -11,6 +11,7 @@ const colorMap = {
   peach: 'bg-peach/40',
   sky: 'bg-sky/40',
   mint: 'bg-mint/40',
+  blush: 'bg-blush/40',
 }
 
 function ProjectCard({ project }) {
