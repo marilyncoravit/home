@@ -211,8 +211,8 @@ export const projects = [
     impact:
       'Within weeks of launch, 24% of weekly email template editors were using the crop button and 22% were cropping images, both close to goal. Support tickets related to images dropped 5%, meeting the goal of no increase despite the added complexity of new controls.',
     stats: [
-      { value: '24%', label: 'of weekly editors used the crop button' },
-      { value: '22%', label: 'of weekly editors cropped images' },
+      { value: '24%', label: 'of weekly email editors used the crop button' },
+      { value: '22%', label: 'of weekly email editors cropped images' },
       { value: '5%', label: 'fewer image-related support tickets' },
     ],
     futureHeading: 'Designing a more intuitive crop experience',
