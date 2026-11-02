@@ -43,8 +43,12 @@ export default function CaseStudy() {
 
   if (!project) return <Navigate to="/" replace />
 
-  const projectIndex = projects.findIndex((p) => p.slug === project.slug)
-  const otherProject = projects[(projectIndex + 1) % projects.length]
+  const visibleProjects = projects.filter((p) => p.slug !== 'artifact')
+  const visibleIndex = visibleProjects.findIndex((p) => p.slug === project.slug)
+  const otherProject =
+    visibleIndex === -1
+      ? visibleProjects[0]
+      : visibleProjects[(visibleIndex + 1) % visibleProjects.length]
   const Diagram = diagramMap[project.slug]
   const [lightboxImage, setLightboxImage] = useState(null)
 
