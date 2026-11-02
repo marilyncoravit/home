@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import panelImg from '../../assets/ImageEditingPanel.webp'
 import ratiosImg from '../../assets/ImageEditingRatios.webp'
 import resultImg from '../../assets/ImageEditingResult.webp'
+import Lightbox from '../ui/Lightbox'
 
 const steps = [
   {
@@ -27,6 +29,8 @@ const steps = [
 ]
 
 export default function ImageEditingDiagram() {
+  const [lightboxImage, setLightboxImage] = useState(null)
+
   return (
     <div className="mt-10 grid gap-6 sm:grid-cols-3">
       {steps.map((step) => (
@@ -35,14 +39,22 @@ export default function ImageEditingDiagram() {
             Step {step.number}
           </p>
           <p className="mt-1 text-lg font-bold">{step.title}</p>
-          <img
-            src={step.image}
-            alt={step.alt}
-            className="mt-4 aspect-[16/10] w-full rounded-2xl object-cover object-top"
-          />
+          <button
+            type="button"
+            onClick={() => setLightboxImage({ src: step.image, alt: step.alt })}
+            className="block w-full cursor-zoom-in transition-opacity hover:opacity-90"
+          >
+            <img
+              src={step.image}
+              alt={step.alt}
+              className="mt-4 aspect-[16/10] w-full rounded-2xl object-cover object-top"
+            />
+          </button>
           <p className="mt-3 text-sm leading-relaxed text-muted">{step.caption}</p>
         </div>
       ))}
+
+      <Lightbox image={lightboxImage} onClose={() => setLightboxImage(null)} />
     </div>
   )
 }

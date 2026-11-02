@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import BrandLibraryDiagram from '../components/case-study/BrandLibraryDiagram'
 import EmailAIDiagram from '../components/case-study/EmailAIDiagram'
@@ -5,6 +6,7 @@ import ImageEditingDiagram from '../components/case-study/ImageEditingDiagram'
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
 import Icon from '../components/ui/Icon'
+import Lightbox from '../components/ui/Lightbox'
 import PlaceholderImage from '../components/ui/PlaceholderImage'
 import { getProject, projects } from '../data/projects'
 import { site } from '../data/site'
@@ -44,6 +46,7 @@ export default function CaseStudy() {
   const projectIndex = projects.findIndex((p) => p.slug === project.slug)
   const otherProject = projects[(projectIndex + 1) % projects.length]
   const Diagram = diagramMap[project.slug]
+  const [lightboxImage, setLightboxImage] = useState(null)
 
   return (
     <article>
@@ -154,11 +157,22 @@ export default function CaseStudy() {
                 ))}
                 {fsection.image && (
                   <figure className="mx-auto mt-4 max-w-xl">
-                    <img
-                      src={fsection.image}
-                      alt={fsection.imageAlt ?? fsection.heading}
-                      className="w-full rounded-2xl hand-border"
-                    />
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setLightboxImage({
+                          src: fsection.image,
+                          alt: fsection.imageAlt ?? fsection.heading,
+                        })
+                      }
+                      className="block w-full cursor-zoom-in transition-opacity hover:opacity-90"
+                    >
+                      <img
+                        src={fsection.image}
+                        alt={fsection.imageAlt ?? fsection.heading}
+                        className="w-full rounded-2xl hand-border"
+                      />
+                    </button>
                     {fsection.imageCaption && (
                       <figcaption className="mt-2 text-center text-xs text-muted">
                         {fsection.imageCaption}
@@ -201,11 +215,22 @@ export default function CaseStudy() {
                   {project.takeaways.map((item) => (
                     <div key={item.heading}>
                       {item.image && (
-                        <img
-                          src={item.image}
-                          alt={item.imageAlt ?? item.heading}
-                          className="mb-4 w-full rounded-2xl hand-border"
-                        />
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setLightboxImage({
+                              src: item.image,
+                              alt: item.imageAlt ?? item.heading,
+                            })
+                          }
+                          className="block w-full cursor-zoom-in transition-opacity hover:opacity-90"
+                        >
+                          <img
+                            src={item.image}
+                            alt={item.imageAlt ?? item.heading}
+                            className="mb-4 w-full rounded-2xl hand-border"
+                          />
+                        </button>
                       )}
                       <h3 className="text-lg font-bold">{item.heading}</h3>
                       <p className="mt-2 text-sm leading-relaxed text-muted">{item.body}</p>
@@ -246,6 +271,8 @@ export default function CaseStudy() {
           </Button>
         </div>
       </section>
+
+      <Lightbox image={lightboxImage} onClose={() => setLightboxImage(null)} />
     </article>
   )
 }
