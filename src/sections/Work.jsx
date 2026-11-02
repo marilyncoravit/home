@@ -94,9 +94,39 @@ export default function Work() {
         </div>
 
         {funProject && (
-          <div className="mt-8 grid gap-8 sm:grid-cols-2">
-            <ProjectCard project={funProject} />
-          </div>
+          <Link
+            to={`/work/${funProject.slug}`}
+            className={`group mt-8 flex flex-col gap-6 rounded-3xl hand-border p-6 transition-transform duration-200 hover:-translate-y-1 sm:flex-row sm:items-center sm:gap-10 sm:p-8 ${colorMap[funProject.color]}`}
+          >
+            <div className="flex-1">
+              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-muted">
+                <Icon name="sparkle" className="h-4 w-4" />
+                Fun stuff
+              </div>
+              <h3 className="mt-2 text-2xl font-bold">{funProject.title}</h3>
+              <p className="mt-2 max-w-md text-sm leading-relaxed text-muted">
+                {funProject.subtitle}
+              </p>
+              <span className="mt-4 inline-flex items-center gap-3 text-sm font-semibold">
+                View the project
+                <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full hand-border bg-paper transition-transform group-hover:translate-x-1">
+                  <Icon name="arrowRight" className="h-4 w-4" />
+                </span>
+              </span>
+            </div>
+            {funProject.image ? (
+              <img
+                src={funProject.image}
+                alt={`${funProject.title} screenshot`}
+                className="aspect-[16/9] w-full rounded-2xl bg-paper object-contain sm:w-80 sm:shrink-0"
+              />
+            ) : (
+              <PlaceholderImage
+                label={`${funProject.title} screenshot`}
+                className="sm:w-80 sm:shrink-0"
+              />
+            )}
+          </Link>
         )}
       </div>
     </section>
