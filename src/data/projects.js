@@ -9,7 +9,8 @@ import emailAIStartSmall from '../assets/EmailAIStartSmall.webp'
 import emailAIClarity from '../assets/EmailAIClarity.webp'
 import artifactHome from '../assets/ArtifactHome.webp'
 import imageEditingHome from '../assets/ImageEditingHome.webp'
-import imageEditingExploration from '../assets/ImageEditingExploration.webp'
+import imageEditingEditorBefore from '../assets/ImageEditingEditorBefore.webp'
+import imageEditingEditorAfter from '../assets/ImageEditingEditorAfter.webp'
 import imageEditingShapes from '../assets/ImageEditingShapes.webp'
 
 export const projects = [
@@ -221,9 +222,20 @@ export const projects = [
         paragraphs: [
           "Klaviyo relied on a third-party tool to support image editing, and cropping and resizing were consistently the pain points customers ran into. The opportunity was to bring a simpler, more intuitive editing experience directly into Klaviyo's own editor.",
         ],
-        image: imageEditingExploration,
-        imageAlt: 'Existing versus proposed image block concepts explored during the redesign',
-        imageCaption: 'Comparing the existing image block with early proposed concepts.',
+        comparisonImages: [
+          {
+            src: imageEditingEditorBefore,
+            alt: 'The third-party image editor Klaviyo relied on before the redesign',
+            label: 'Existing',
+          },
+          {
+            src: imageEditingEditorAfter,
+            alt: 'The new native crop tool inside the Klaviyo email editor',
+            label: 'Proposed',
+          },
+        ],
+        imageCaption:
+          "Klaviyo relied on an embedded third-party editor; the redesign brought cropping natively into Klaviyo's own editor.",
       },
       {
         heading: 'Designing a more intuitive workflow',

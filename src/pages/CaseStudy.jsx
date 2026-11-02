@@ -184,6 +184,53 @@ export default function CaseStudy() {
                     )}
                   </figure>
                 )}
+                {fsection.comparisonImages && (
+                  <figure className="mx-auto mt-4 max-w-4xl">
+                    <div className="flex flex-col items-stretch gap-4 sm:flex-row">
+                      <div className="flex-1 rounded-3xl hand-border bg-paper p-4">
+                        <p className="text-center text-xs font-semibold uppercase tracking-wide text-muted">
+                          {fsection.comparisonImages[0].label}
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() => setLightboxImage(fsection.comparisonImages[0])}
+                          className="mt-3 block w-full cursor-zoom-in transition-opacity hover:opacity-90"
+                        >
+                          <img
+                            src={fsection.comparisonImages[0].src}
+                            alt={fsection.comparisonImages[0].alt}
+                            className="w-full rounded-2xl"
+                          />
+                        </button>
+                      </div>
+                      <Icon
+                        name="arrowRight"
+                        className="h-6 w-6 shrink-0 self-center rotate-90 text-muted sm:rotate-0"
+                      />
+                      <div className="flex-1 rounded-3xl hand-border bg-paper p-4">
+                        <p className="text-center text-xs font-semibold uppercase tracking-wide text-muted">
+                          {fsection.comparisonImages[1].label}
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() => setLightboxImage(fsection.comparisonImages[1])}
+                          className="mt-3 block w-full cursor-zoom-in transition-opacity hover:opacity-90"
+                        >
+                          <img
+                            src={fsection.comparisonImages[1].src}
+                            alt={fsection.comparisonImages[1].alt}
+                            className="w-full rounded-2xl"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                    {fsection.imageCaption && (
+                      <figcaption className="mt-3 text-center text-xs text-muted">
+                        {fsection.imageCaption}
+                      </figcaption>
+                    )}
+                  </figure>
+                )}
                 {fsection.morePara && (
                   <p className="mt-4 text-sm leading-relaxed text-muted">{fsection.morePara}</p>
                 )}
