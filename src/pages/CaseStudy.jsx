@@ -1,5 +1,6 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import BrandLibraryDiagram from '../components/case-study/BrandLibraryDiagram'
+import EmailAIDiagram from '../components/case-study/EmailAIDiagram'
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
 import Icon from '../components/ui/Icon'
@@ -19,6 +20,11 @@ const statsColsMap = {
   3: 'sm:grid-cols-3',
 }
 
+const diagramMap = {
+  'brand-library': BrandLibraryDiagram,
+  'email-ai': EmailAIDiagram,
+}
+
 export default function CaseStudy() {
   const { slug } = useParams()
   const project = getProject(slug)
@@ -26,6 +32,7 @@ export default function CaseStudy() {
   if (!project) return <Navigate to="/" replace />
 
   const otherProject = projects.find((p) => p.slug !== project.slug)
+  const Diagram = diagramMap[project.slug]
 
   return (
     <article>
@@ -136,7 +143,7 @@ export default function CaseStudy() {
                 ))}
               </div>
             ))}
-            {project.showDiagram && <BrandLibraryDiagram />}
+            {project.showDiagram && Diagram && <Diagram />}
 
             {project.takeawaysHeading && (
               <div className="mt-14">

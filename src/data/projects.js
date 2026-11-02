@@ -97,18 +97,66 @@ export const projects = [
     role: 'Product Designer',
     client: 'Klaviyo',
     color: 'peach',
+    caseSubtitle: 'Turning a blank canvas into a fast, on-brand starting point',
+    openingParagraphs: [
+      'Marketers spent too long starting from scratch, and existing AI tools felt detached from brand context. The challenge was to make content generation fast and on-brand, right inside the editor.',
+      "I led the design of Email AI for marketers, e-commerce owners, and lifecycle managers who were staring at a blank editor, reusing old campaigns to save time, or struggling to stay on-brand without a dedicated copywriter or designer. The goal was to help them move from blank canvas to on-brand draft faster, without sacrificing control or quality.",
+    ],
     image: emailAIHome,
     caseVideo: emailAICase1Video,
     problem:
-      'Creating on-brand, high-performing emails in Klaviyo was time-consuming. Users often started from a blank canvas and struggled to design layouts that balanced brand consistency with best practices for conversion.',
+      'Marketers spent too long starting from scratch, and existing AI tools felt detached from brand context. The challenge was to make content generation fast and on-brand, right inside the editor.',
     approach:
-      'In partnership with our PM, data scientist, engineers, and behavioral designer, I led the design of Email AI, a modular, section-based experience that puts creative control back in the user’s hands. The trust and transparency built into this workflow became a blueprint for how future AI functionality could be thoughtfully introduced across Klaviyo.',
+      "I led the design of Email AI, partnering with product, engineering, and data science to shape an experience that automates repetitive writing and layout tasks while keeping creative decisions, like storytelling and brand tone, in the user's hands. Grounding generation in brand data and keeping edit paths visible kept users in control throughout.",
     impact:
-      'The launch of Email AI gave users a faster, more flexible way to build emails while maintaining brand consistency and control. Early feedback showed increased confidence in AI-generated content, higher engagement with the editor, and faster time-to-publish, validating a design approach that balances automation with user intent.',
+      'We launched a focused MVP to observe real behavior, tracking adoption, time-to-draft, and regenerate frequency. After iterating on how visible AI was within the editor, early signals showed improved recognition and usage without major structural changes, validating a design approach that balances automation with user intent.',
     stats: [
       { value: '60%', label: 'faster to first draft' },
       { value: '4x', label: 'more concepts explored in early testing' },
       { value: '85%', label: 'of users reported easier content creation' },
+    ],
+    futureHeading: 'Designing a thoughtful AI collaborator',
+    futureSections: [
+      {
+        heading: 'Understanding the opportunity',
+        paragraphs: [
+          'Primary users were marketers, e-commerce owners, and lifecycle managers juggling multiple channels with little time for content creation. Contextual interviews and usability tests surfaced a consistent pattern: users struggled to start, but valued control once they did, often reusing old campaigns just to avoid a blank canvas.',
+          'That insight shaped where AI could help most: automating repetitive writing and layout tasks while keeping creative decisions, like storytelling and brand tone, in human hands.',
+        ],
+      },
+      {
+        heading: 'From concept to interface',
+        paragraphs: [
+          'I brainstormed prompt-based versus structured generation flows and prototyped several entry points, including a sidebar modal, an inline assistant, and quick actions, before landing on a "Design with AI" panel that let users describe a section and generate on-brand drafts directly in the editor.',
+          'Partnering closely with data science and engineering, I helped define what "good" AI output looked like, including visual harmony, diversity across drafts, and concise, on-brand copywriting, and used quick proof-of-concepts to validate generation quality before the full build.',
+        ],
+      },
+      {
+        heading: 'Learning from real usage',
+        paragraphs: [
+          'We launched a focused MVP to observe real behavior, tracking adoption, time-to-draft, and regenerate frequency. Early usage showed adoption, but also discoverability gaps: the AI tool was easy to miss inside the editor flow.',
+          'I explored several ways to surface AI in context, from an educational popover to a deeper IA restructure, before landing on a simpler fix: a more visible sparkle icon in the primary intelligence color and a purple highlight around AI-generated sections, with the tool opening automatically once a block was placed. Early signals showed improved recognition and usage without major structural changes.',
+        ],
+      },
+      {
+        heading: 'Defining the AI experience while designing it',
+        paragraphs: [
+          'AI within Klaviyo was still emerging: naming, visuals, tone, and usage patterns were all being defined in real time. Cross-functional working sessions with product, data science, and design systems shaped foundational decisions, from what to call AI across the product to how it should look and feel and how to inform users of generation limits and transparency.',
+          'The outcome was a shared AI design language that balanced trust, clarity, and consistency, a foundation other AI features across Klaviyo could build on.',
+        ],
+      },
+    ],
+    showDiagram: true,
+    takeawaysHeading: 'Reflections & Learnings',
+    takeaways: [
+      {
+        heading: 'Start small, learn fast',
+        body: 'Launching a focused MVP let us observe real behavior instead of guessing. Tracking adoption and regenerate frequency surfaced the discoverability gap faster than a longer research phase would have, giving us a clear, low-risk path to iterate before investing in a larger redesign.',
+      },
+      {
+        heading: 'Clarity before creativity',
+        body: "Giving users visible feedback, like rate limits, prompts to add more detail, and a way to rate drafts as helpful or not, mattered more than polishing the generation itself. Clear, honest signals about what the AI could and couldn't do built more trust than a flashier interface would have.",
+      },
     ],
   },
   {
